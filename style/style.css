@@ -1,0 +1,176 @@
+/*
+    Authors:
+        Santiago Kiril Cenkov Stoyanov / 100472051@alumnos.uc3m.es
+        Oscar Hontoria Herrador / 100471a20@alumnos.uc3m.es
+*/
+
+
+@font-face
+{
+    font-family: "Norse-B";
+    src: url("../media/fonts/norse-font/NorseBold-2Kge.otf");
+}
+@font-face
+{
+    font-family: "Norse-R";
+    src: url("../media/fonts/norse-font/Norse-KaWl.otf");
+}
+
+@font-face
+{
+    font-family: "Ubuntu-B";
+    src: url("../media/fonts/ubuntu-font-family-0.83/Ubuntu-B.ttf");
+}
+@font-face
+{
+    font-family: "Ubuntu-R";
+    src: url("../media/fonts/ubuntu-font-family-0.83/Ubuntu-R.ttf");
+}
+@font-face
+{
+    font-family: "Ubuntu-L";
+    src: url("../media/fonts/ubuntu-font-family-0.83/Ubuntu-L.ttf");
+}
+
+html
+{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    margin: inherit;
+    font-family: "Norse-B", "Ubuntu-B", "sans-serif";
+    font-weight: bold;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    color: rgb(156, 223, 255);
+}
+h1
+{
+    font-size: max(3.5dvw, 25px);
+}
+h2
+{
+    font-size: max(2.5dvw, 25px);
+}
+p
+{
+    margin: inherit;
+    font-size: max(2.1dvw, 30px);
+    font-family: "Norse-R", "Ubuntu-R", "sans-serif";
+    font-variant: small-caps;
+    color: rgb(255, 255, 255);
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.material-icons
+{
+    color: rgb(255, 255, 255);
+}
+
+img
+{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+figure
+{
+    margin: inherit;
+    display: flex;
+    flex: 1 1 0;
+}
+
+video
+{
+    max-height: 100%;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+}
+
+header
+{
+    height: 12.5dvw;
+    width: 100dvw;
+    display: flex;
+    background-color: rgb(70, 70, 70);
+}
+
+article
+{
+    max-height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+}
+
+.flex_container-x
+{
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.flex_container-y
+{
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container-text
+{
+    position: absolute;
+}
+
+.grow
+{
+    flex-grow: 1;
+}
+
+.slide
+{
+    display: none;
+}
+
+.navigation_dot
+{
+    height: 25px;
+    width: 25px;
+    background-color: brown;
+    border: 2px solid rgb(207, 207, 207);
+    margin: 8px 8px;
+    cursor: pointer;
+}
+
+footer
+{
+    height: 12.5dvh;
+    width: 100dvw;
+    background-color: rgb(70, 70, 70);
+}
+footer > .flex_container-x > p
+{
+    font-size: max(1.15dvw, 15px);
+    font-family: "Ubuntu-L", "sans-serif";
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+@media only screen and (min-width: 600px)
+{
+
+}
