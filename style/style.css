@@ -123,6 +123,9 @@ article
     max-width: 100%;
     display: flex;
     flex-direction: row;
+    border-color: red;
+    border-style: solid;
+    
 }
 .flex_container-y
 {
@@ -130,6 +133,8 @@ article
     max-width: 100%;
     display: flex;
     flex-direction: column;
+    border-color: blue;
+    border-style: solid;
 }
 .container-text
 {
@@ -167,6 +172,17 @@ footer > .flex_container-x > p
     font-size: max(1.15dvw, 15px);
     font-family: "Ubuntu-L", "sans-serif";
     color: rgba(255, 255, 255, 0.8);
+}
+
+.center
+{
+    align-items: center;
+    justify-content: center;
+}
+
+.paso
+{
+    background-color: orange;
 }
 
 
