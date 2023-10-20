@@ -201,9 +201,13 @@ section
 
 footer
 {
+    display: flex;
+    flex-direction: row;
     position: relative;
     height: 12.5dvh;
     width: 100dvw;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(70, 70, 70);
 }
 footer > .flex-x > p
