@@ -16,77 +16,67 @@
         <title>MJÖLNIR - The Nordic Mead Hall</title>
     </head>
     <body>
-        <header class="flex_container-x">
-            <figure class="flex_container-x">
+        <header class="flex-x">
+            <figure class="flex-x">
                 <img alt="MJÖLNIR logo" src="../media/images/logos/logo_mjolnir.png">
             </figure>
-            <div class="flex_container-x grow">
+            <div class="flex-x">
                 <h1>MJÖLNIR<br>The Nordic Mead Hall</h1>
             </div>
-            <div class="flex_container-x">
+            <div class="flex-x">
                 <span class="material-icons">menu</span>
             </div>
         </header>
         <main>
-            <article class="flex_container-y">
-                <figure class="flex_container-y">
+            <section id="home">
+                <figure class="single_box">
                     <img alt="MJÖLNIR gates" src="../media/images/backgrounds/bck_home.jpg">
-                    <nav class="flex_container-y">
-                        <div class="flex_container-y">
-                            <a href="#about"><h2>About</h2></a>
-                        </div>
-                        <div class="flex_container-y">
-                            <a href="#drinks"><h2>Drinks</h2></a>
-                        </div>
-                        <div class="flex_container-y">
-                            <a href="#meals"><h2>Meals</h2></a>
-                        </div>
-                        <div class="flex_container-y">
-                            <a href=""><h2>Menu</h2></a>
-                        </div>
-                        <div class="flex_container-y">
-                            <a href="#join"><h2>Join</h2></a>
-                        </div>
-                        <div class="flex_container-y">
-                            <a href="#contact"><h2>Contact</h2></a>
-                        </div>
+                    <nav>
+                        <a class="nav_section" href="#about"><h2>About</h2></a>
+                        <a class="nav_section" href="#drinks"><h2>Drinks</h2></a>
+                        <a class="nav_section" href="#meals"><h2>Meals</h2></a>
+                        <a class="nav_section" target="_blank" href="./menu.html"><h2>Menu</h2></a>
+                        <a class="nav_section" href="#join"><h2>Join</h2></a>
+                        <a class="nav_section" href="#contact"><h2>Contact</h2></a>
                     </nav>
                 </figure>
-                <video class="flex_container-y" controls="controls" autoplay="autoplay" muted="muted" loop="loop">
-                    <source src="../media/videos/Grimfrost Presents - Our Vision and Values.mp4">
-                </video>
-            </article>
-            <article class="flex_container-y">
-                <img src="../media/images/galaxy_night_sky_sky_star_space-506608.jpg">
-                <div class="flex_container-y">
-                    <h2 id="about">About</h2>
+                <div class="single_box">
+                    <video controls="controls" autoplay="autoplay" muted="muted" loop="loop">
+                        <source src="../media/videos/Grimfrost Presents - Our Vision and Values.mp4">
+                    </video>
                 </div>
-                <div class="flex_container-y">
-                    <section class="flex_container-y">
+            </section>
+            <section id="about">
+                <img src="../media/images/galaxy_night_sky_sky_star_space-506608.jpg">
+                <div class="flex-y">
+                    <h2>About</h2>
+                </div>
+                <div class="flex-y">
+                    <section>
                         <h3>Nature is our ingredient</h3>
                         <p>From the dense forests to the cold sea we hunt, fish and gather the gifts of nature to bring you the freshest taste.</p>
                     </section>
-                    <div class="flex_container-y">
+                    <div class="flex-y">
                         <span>&#9898;</span>
                     </div>
-                    <section class="flex_container-y">
+                    <section>
                         <h3>Heritage is our pride</h3>
                         <p>Build from the first norsemen settlers, Mjölnir, The Nordic Mead Hall, seeks to transcend you to the ancient viking age.</p>
                     </section>
-                    <div class="flex_container-y">
+                    <div class="flex-y">
                         <span>&#9898;</span>
                     </div>
-                    <section class="flex_container-y">
+                    <section>
                         <h3>Family is our backbone</h3>
-                        <p>Known by its hospitality, our familiy will receive you with pleasure.</p>
+                        <p>The historical hospitality, warmth and effort of our family will make you live a unique experience.</p>
                     </section>
                 </div>
-            </article>
-            <article class="flex_container-y">
-                <div class="flex_container-y">
-                    <h2 id="drinks">Drinks</h2>
+            </section>
+            <section id="drinks">
+                <div class="flex-y">
+                    <h2>Drinks</h2>
                 </div>
-                <div class="flex_container-x">
+                <div class="flex-x">
                     <section class="slide slide_text_drinks">
                         <h3>Þórr's Strength</h3>
                         <p>Þórr, the jqtunn slayer and champion of the Æsir, is also the strongest among them.<br>
@@ -109,7 +99,7 @@
                             His last drink will be buffalo milk with berries, celery and garlic.</p>
                     </section>
                 </div>
-                <figure class="flex_container-x">
+                <figure class="flex-x">
                     <div class="slide slide_drinks"
                             onmouseover="stopSliding('slide_drinks')"
                             onmouseout="resumeSliding('slide_drinks', 0)">
@@ -131,7 +121,7 @@
                         <img alt="Loki's Betrayal drink" src="../media/images/contents/loki-s_betrayal.jpg">
                     </div>
                 </figure>
-                <div class="flex_container-x">
+                <div class="flex-x">
                     <span class="navigation_dot"
                         onclick="gotoSlide('slide_drinks', 0)"></span>
                     <span class="navigation_dot"
@@ -141,12 +131,12 @@
                     <span class="navigation_dot"
                         onclick="gotoSlide('slide_drinks', 3)"></span>
                 </div>
-            </article>
-            <article class="flex_container-y">
-                <div class="flex_container-y">
-                    <h2 id="meals">Meals</h2>
+            </section>
+            <section id="meals">
+                <div class="flex-y">
+                    <h2>Meals</h2>
                 </div>
-                <div class="flex_container-x">
+                <div class="flex-x">
                     <section class="slide slide_text_meals">
                         <h3>Jqrmungandr's Preys</h3>
                         <p>Jqrmungandr, the unfathomably large sea serpent that encircles Miðgarðr, will fight against Þórr on Ragnarqk.<br>
@@ -168,7 +158,7 @@
                             Her beauty is thanks to her feeding. It is said that she eats pancakes with honey, highbush blueberry and red dogwood.</p>
                     </section>
                 </div>
-                <figure class="flex_container-x">
+                <figure class="flex-x">
                     <div class="slide slide_meals">
                         <img alt="Jormungandr's Preys meal" src="../media/images/contents/jormungandr-s_preys.jpg">
                     </div>
@@ -182,20 +172,35 @@
                         <img alt="Freyja's Beauty meal" src="../media/images/contents/freyja-s_beauty.jpg">
                     </div>
                 </figure>
-            </article>
-            <article class="flex_container-y">
-                <div class="flex_container-y">
-                    <h2 id="join">Join</h2>
+            </section>
+            <section id="join">
+                <div class="flex-y">
+                    <h2>Join</h2>
                 </div>
-                <form action="login" method="get"></form>
-                <label for="input">User</label>
-                <input type="text" name="field1" id="input">
-                <input type="submit" name="submit" value="send">
-            </article>
-            <article class="flex_container-y">
-                <div class="flex_container-y">
-                    <h2 id="contact">Contact</h2>
+                <form class="flex-y" action="login" method="get" name="join_form" autocomplete="on" accept-charset="UTF-8">
+                    <label for="id_number_label">
+                        <p>Identity Document Number:</p>
+                    </label>
+                    <input type="text" name="id_number_input" placeholder="Identity Document Number">
+                    <input type="text" name="id_name_input" placeholder="Name">
+                    <input type="text" name="id_surname_input" placeholder="Surname">
+                    <input type="text" name="id_phone_input" placeholder="Phone Number">
+                    <input type="email" name="id_number_input" placeholder="Email">
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+            <section id="contact">
+                <div class="flex-y">
+                    <h2>Contact</h2>
                 </div>
+                <form class="flex-y" method="get" name="contact_form" autocomplete="on" accept-charset="UTF-8">
+                    <input type="text" name="id_name_input" placeholder="Name">
+                    <input type="text" name="id_surname_input" placeholder="Surname">
+                    <input type="text" name="id_phone_input" placeholder="Phone Number">
+                    <input type="text" name="id_number_input" placeholder="Email">
+                    <textarea name="Message" placeholder="Message"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
                 <div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d27160.7702139302!2d18.6996349506288!3d67.89904726209613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sTarfala%20981%2099%20Sweden!5e1!3m2!1sen!2ses!4v1697293656197!5m2!1sen!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
@@ -215,10 +220,10 @@
                 <a target="_blank" href="https://www.youtube.com/Grimfrost">
                     <img alt="GRIMFROST" src="../media/images/logos/logo_grimfrost.png">
                 </a>
-            </article>
+            </section>
         </main>
-        <footer class="flex_container-y">
-            <div class="flex_container-x">
+        <footer class="flex-y">
+            <div class="flex-x">
                 <p><span>&copy;</span> 2023 | MJÖLNIR - The Nordic Mead Hall</p>
             </div>
         </footer>
