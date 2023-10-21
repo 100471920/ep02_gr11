@@ -37,24 +37,24 @@
                     </div>
                     <div class="flex-x grow">
                         <div class="flex-x grow center">
-                            <button onclick="add_product()">-</button>
+                            <button class="btn btn-add" onclick="add_product('drink1')">AÑADIR</button>
                         </div>
                         <div class="flex-x grow center">
-                            <p>[cantidad]</p>
+                            <input class="Quantity" type="number" name="Cantidad" min="0" max="100" value= "1" placehorder ="Cantidad" />
                         </div>
                         <div class="flex-x grow center">
-                            <p>+</p>
+                            <button class="btn btn-remove"  onclick="remove_product('drink1')">QUITAR</button>
                         </div>
                     </div> 
                     <div class="flex-x grow">
                         <p>[imagen]</p>
                     </div>  
-
+                    <ul id="myList"></ul>
                 
             </section>
 
 
         </article>
-        <script src="./script/menu.js"></script>
+        <script src="../script/menu.js"></script>
     </body>
 </html>

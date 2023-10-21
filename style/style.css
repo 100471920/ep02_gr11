@@ -171,7 +171,6 @@ input, textarea
     max-width: 100%;
     display: flex;
     flex-direction: row;
-    
 }
 .flex-y
 {
@@ -241,11 +240,42 @@ input, textarea
 {
     flex-grow: 1;
 }
+.error_message
+{
+    font-size: 15px;
+    color: red;
+}
 
 .center
 {
     align-items: center;
     justify-content: center;
+}
+
+.btn
+{
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .76em;
+    cursor: pointer;
+}
+
+.btn-add
+{
+    color:white;
+    background-color: #47ce69;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-remove
+{
+    color:white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
 }
 
 .paso

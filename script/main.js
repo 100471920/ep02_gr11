@@ -44,11 +44,3 @@ function gotoSlide(slide_class, slide_index)
 {
     showSlide(slide_class, slide_index);
 }
-
-
-/*
-let form = document.querySelector("form");
-form.addEventListener("submit", (event) =>
-{
-console.log("sent");
-});*/

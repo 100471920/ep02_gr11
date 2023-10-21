@@ -181,19 +181,24 @@
                 </div>
                 <form method="get" name="join_form" autocomplete="on" accept-charset="UTF-8">
                     <div class="input-box">
-                        <input type="text" name="id_number_input" placeholder="Identity Document Number">
+                        <input class="id_number_input" type="text" name="id_number" placeholder="ID Number">
+                        <div class="input-error-box"></div>
                     </div>
                     <div class="input-box">
-                        <input type="text" name="id_name_input" placeholder="Name">
+                        <input class="name_input" type="text" name="name" placeholder="Name">
+                        <div class="input-error-box"></div>
                     </div>
                     <div class="input-box">
-                        <input type="text" name="id_surname_input" placeholder="Surname">
+                        <input class="family_name_input" type="text" name="family_name" placeholder="Family Name">
+                        <div class="input-error-box"></div>
                     </div>
                     <div class="input-box">
-                        <input type="tel" name="id_phone_input" placeholder="Phone Number">
+                        <input class="phone_number_input" type="tel" name="phone_number" placeholder="Phone Number">
+                        <div class="input-error-box"></div>
                     </div>
-                    <div onclick="verifyEmail()" class="input-box">
-                        <input type="email" name="id_number_input" placeholder="Email">
+                    <div class="input-box">
+                        <input class="email_input" type="email" name="email" placeholder="Email">
+                        <div class="input-error-box"></div>
                     </div>
                     <div class="input-box">
                         <input type="submit" value="Submit">
@@ -218,12 +223,12 @@
                     <div class="center_box">
                         <h2>Contact Us</h2>
                     </div>
-                    <form method="get" name="contact_form" autocomplete="on" accept-charset="UTF-8">
+                    <form action="/" method="get" name="contact_form" autocomplete="on" accept-charset="UTF-8">
                         <div class="input-box">
-                            <input type="text" name="id_name_input" placeholder="Name">
+                            <input type="text" name="name" placeholder="Name" required>
                         </div>
                         <div class="input-box">
-                            <input type="email" name="id_number_input" placeholder="Email">
+                            <input type="email" name="email" placeholder="Email" required>
                         </div>
                         <div class="textarea-box">
                             <textarea name="message" placeholder="Message"></textarea>
