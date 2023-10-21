@@ -99,10 +99,9 @@ video
     margin: inherit;
 }
 
-header
+header, footer
 {
-    position: relative;
-    height: 12.5dvw;
+    height: 12dvh;
     width: 100dvw;
     display: flex;
     flex-direction: row;
@@ -111,14 +110,36 @@ header
     background-color: rgb(70, 70, 70);
 }
 
+footer
+{
+    justify-content: center;
+    align-items: center;
+}
+footer > .flex-x > p
+{
+    font-size: 3dvw;
+    font-family: "Ubuntu-L", "sans-serif";
+    color: rgba(255, 255, 255, 0.8);
+}
+
 nav
 {
-    display: none;
     position: absolute;
+    display: none;
+}
+
+form
+{
+    display: flex;
+}
+
+nav, form
+{
     height: 100%;
     width: 100%;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
     gap: 5%;
     padding: 7.5%;
 }
@@ -130,6 +151,18 @@ section
     display: flex;
     flex-direction: column;
     background-color: rgb(0, 0, 0);
+}
+
+input, textarea
+{
+    height: 100%;
+    width: 100%;
+    padding: 12px;
+    border: 0px;
+    /*background-color: transparent;*/
+    font-family: "Norse-R", "Ubuntu-R", "sans-serif";
+    /*color: rgb(255, 255, 255);*/
+    outline: none;
 }
 
 .flex-x
@@ -199,22 +232,14 @@ section
     cursor: pointer;
 }
 
-footer
+.input-box, .textarea-box
 {
     display: flex;
-    flex-direction: row;
-    position: relative;
-    height: 12.5dvh;
-    width: 100dvw;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(70, 70, 70);
+    flex-direction: column;
 }
-footer > .flex-x > p
+.textarea-box
 {
-    font-size: max(1.15dvw, 15px);
-    font-family: "Ubuntu-L", "sans-serif";
-    color: rgba(255, 255, 255, 0.8);
+    flex-grow: 1;
 }
 
 .center
@@ -253,5 +278,10 @@ footer > .flex-x > p
     #home
     {
         flex-direction: row-reverse;
+    }
+
+    #contact
+    {
+        flex-direction: row;
     }
 }

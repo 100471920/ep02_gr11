@@ -50,7 +50,7 @@
             </section>
             <section id="about">
                 <img src="../media/images/galaxy_night_sky_sky_star_space-506608.jpg">
-                <div class="flex-y">
+                <div class="center_box">
                     <h2>About</h2>
                 </div>
                 <div class="flex-y">
@@ -75,7 +75,7 @@
                 </div>
             </section>
             <section id="drinks">
-                <div class="flex-y">
+                <div class="center_box">
                     <h2>Drinks</h2>
                 </div>
                 <div class="flex-x">
@@ -135,7 +135,7 @@
                 </div>
             </section>
             <section id="meals">
-                <div class="flex-y">
+                <div class="center_box">
                     <h2>Meals</h2>
                 </div>
                 <div class="flex-x">
@@ -176,53 +176,84 @@
                 </figure>
             </section>
             <section id="join">
-                <div class="flex-y">
-                    <h2>Join</h2>
+                <div class="center_box">
+                    <h2>Join Us</h2>
                 </div>
-                <form class="flex-y" action="login" method="get" name="join_form" autocomplete="on" accept-charset="UTF-8">
-                    <label for="id_number_label">
-                        <p>Identity Document Number:</p>
-                    </label>
-                    <input type="text" name="id_number_input" placeholder="Identity Document Number">
-                    <input type="text" name="id_name_input" placeholder="Name">
-                    <input type="text" name="id_surname_input" placeholder="Surname">
-                    <input type="text" name="id_phone_input" placeholder="Phone Number">
-                    <input type="email" name="id_number_input" placeholder="Email">
-                    <input type="submit" value="Submit">
+                <form method="get" name="join_form" autocomplete="on" accept-charset="UTF-8">
+                    <div class="input-box">
+                        <input type="text" name="id_number_input" placeholder="Identity Document Number">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="id_name_input" placeholder="Name">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="id_surname_input" placeholder="Surname">
+                    </div>
+                    <div class="input-box">
+                        <input type="tel" name="id_phone_input" placeholder="Phone Number">
+                    </div>
+                    <div onclick="verifyEmail()" class="input-box">
+                        <input type="email" name="id_number_input" placeholder="Email">
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" value="Submit">
+                    </div>
                 </form>
             </section>
             <section id="contact">
-                <div class="flex-y">
-                    <h2>Contact</h2>
-                </div>
                 <div>
-                    <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15848.49113993154!2d10.762350216610589!3d63.36882858283222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x466d3d0a6e0e25a5%3A0x95f6f8522d61b194!2sStorfossen!5e1!3m2!1sen!2ses!4v1697817222063!5m2!1sen!2ses"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer"></iframe>
+                    <div class="center_box">
+                        <h2>Location</h2>
+                    </div>
+                    <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d376487.20434680715!2d14.6997787225685!3d67.39023405476105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x45d92bbf45b16587%3A0x56d7a2871248cfc2!2sLitlverivassforsen%20(Vaerivassfossen)!5e1!3m2!1sen!2ses!4v1697839313388!5m2!1sen!2ses"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer"></iframe>
+                    </div>
+                    <div>
+                        <p>MJÖLNIR, The Nordic Mead Hall, is located on Rago National Park near Litlverivatnet waterfall.
+                            It takes 1 hour to drive from Bodø town and 25 minutes on foot to reach the top of the mountain.</p>
+                    </div>
                 </div>
-                <p>Santiago Kiril Cenkov Stoyanov Oscar Hontoria Herrador</p>
-                <a href="mailto:100472051@alumnos.uc3m.es">
-                    <p>100472051@ALUMNOS.UC3M.ES</p>
-                </a>
-                <a href="mailto:100472051@alumnos.uc3m.es">
-                    <p>100471920@ALUMNOS.UC3M.ES</p>
-                </a>
-                <a target="_blank" href="https://viking.style/">
-                    <img alt="VIKING.STYLE" src="../media/images/logos/logo_viking_style.png">
-                </a>
-                <a target="_blank" href="https://www.youtube.com/Skjalden">
-                    <img alt="SKJALDEN" src="../media/images/logos/logo_skjalden.png">
-                </a>
-                <a target="_blank" href="https://www.youtube.com/Grimfrost">
-                    <img alt="GRIMFROST" src="../media/images/logos/logo_grimfrost.png">
-                </a>
-                <form class="flex-y" method="get" name="contact_form" autocomplete="on" accept-charset="UTF-8">
-                    <input type="text" name="id_name_input" placeholder="Name">
-                    <input type="text" name="id_surname_input" placeholder="Surname">
-                    <input type="text" name="id_phone_input" placeholder="Phone Number">
-                    <input type="text" name="id_number_input" placeholder="Email">
-                    <textarea name="Message" placeholder="Message"></textarea>
-                    <input type="submit" value="Submit">
-                </form>
+                <section>
+                    <div class="center_box">
+                        <h2>Contact Us</h2>
+                    </div>
+                    <form method="get" name="contact_form" autocomplete="on" accept-charset="UTF-8">
+                        <div class="input-box">
+                            <input type="text" name="id_name_input" placeholder="Name">
+                        </div>
+                        <div class="input-box">
+                            <input type="email" name="id_number_input" placeholder="Email">
+                        </div>
+                        <div class="textarea-box">
+                            <textarea name="message" placeholder="Message"></textarea>
+                        </div>
+                        <div class="input-box">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </section>
+                <section>
+                    <div class="center_box">
+                        <h2>Social Media</h2>
+                    </div>
+                    <a target="_blank" href="https://viking.style/">
+                        <img alt="VIKING.STYLE" src="../media/images/logos/logo_viking_style.png">
+                    </a>
+                    <a target="_blank" href="https://www.youtube.com/Skjalden">
+                        <img alt="SKJALDEN" src="../media/images/logos/logo_skjalden.png">
+                    </a>
+                    <a target="_blank" href="https://www.youtube.com/Grimfrost">
+                        <img alt="GRIMFROST" src="../media/images/logos/logo_grimfrost.png">
+                    </a>
+                    <p>Santiago Kiril Cenkov Stoyanov Oscar Hontoria Herrador</p>
+                    <a href="mailto:100472051@alumnos.uc3m.es">
+                        <p>100472051@ALUMNOS.UC3M.ES</p>
+                    </a>
+                    <a href="mailto:100472051@alumnos.uc3m.es">
+                        <p>100471920@ALUMNOS.UC3M.ES</p>
+                    </a>
+                </section>
             </section>
         </main>
         <footer>
@@ -230,6 +261,7 @@
                 <p><span>&copy;</span> 2023 | MJÖLNIR - The Nordic Mead Hall</p>
             </div>
         </footer>
+        <script src="../script/form.js"></script>
         <script src="../script/main.js"></script>
     </body>
 </html>
