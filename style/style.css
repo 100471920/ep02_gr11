@@ -240,9 +240,10 @@ input, textarea
 {
     flex-grow: 1;
 }
-.error_message
+.input-error-box
 {
     font-size: 15px;
+    font-family: "Ubuntu-R", "sans-serif";
     color: red;
 }
 

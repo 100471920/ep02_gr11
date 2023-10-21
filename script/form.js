@@ -17,9 +17,6 @@ const NAME_START_PATTERN = /^[A-Z]/;
 const NAME_MIDDLE_PATTERN = /^[A-Z]([a-z]*|[\s-][A-Z])+/;
 const NAME_END_PATTERN = /^[A-Z]([a-z]*|[\s-][A-Z])+$/;
 
-// PHONE NUMBER PATTERNS:
-const PHONE_NUMBER_PATTERN = /^[0-9]{9}$/;
-
 // EMAIL PATTERNS:
 const EMAIL_START_PATTERN = /^[a-zA-Z0-9._-]+/;
 const EMAIL_AT_MIDDLE_PATTERN = /^[a-zA-Z0-9._-]+@/;
@@ -27,16 +24,21 @@ const EMAIL_DOMAIN_MIDDLE_PATTERN = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+/;
 const EMAIL_TLD_MIDDLE_PATTERN = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\./;
 const EMAIL_END_PATTERN = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
+// PHONE NUMBER PATTERNS:
+const PHONE_NUMBER_PATTERN = /^[0-9]{9}$/;
+
 
 const forms = document.getElementsByTagName("form");
-
-
 for (let i=0; i < forms.length; i++)
 {
     forms[i].addEventListener("submit", function(event)
     {
         event.preventDefault();
         validateInputs(forms[i]);
+    });
+    forms[i].addEventListener("reset", function()
+    {
+        setSuccessAll(forms[i]);
     });
 }
 
@@ -47,18 +49,34 @@ function validateInputs(form)
     validateIDNumber(inputs[0]);
     validateName(inputs[1]);
     validateFamilyName(inputs[2]);
-    validatePhoneNumber(inputs[3]);
-    validateEmail(inputs[4]);
+    validateEmail(inputs[3]);
+    validatePhoneNumber(inputs[4]);
 }
 
 
 function setError(input_element, message)
 {
     const input_box = input_element.parentElement;
-    const errorDisplay = input_box.querySelector(".input-error-box");
+    const input_error_box = input_box.querySelector(".input-error-box");
+    input_error_box.innerText = message;
+}
 
-    errorDisplay.innerText = message;
-    input_box.ClassList.add("error_message");
+
+function setSuccessAll(form)
+{
+    const input_error_boxes = form.getElementsByClassName("input-error-box");
+    for (let i=0; i<input_error_boxes.length; i++)
+    {
+        input_error_boxes[i].innerText = "";
+    }
+}
+
+
+function setSuccess(input_element)
+{
+    const input_box = input_element.parentElement;
+    const input_error_box = input_box.querySelector(".input-error-box");
+    input_error_box.innerText = "";
 }
 
 
@@ -85,6 +103,7 @@ function validateIDNumber(id_number_element)
         setError(id_number_element, "ID Number does not exist");
         return false;
     }
+    setSuccess(id_number_element);
     return true;
 }
 
@@ -112,6 +131,7 @@ function validateName(name_element)
         setError(name_element, "Name must end on a letter");
         return false;
     }
+    setSuccess(name_element);
     return true;
 }
 
@@ -139,27 +159,7 @@ function validateFamilyName(family_name_element)
         setError(family_name_element, "Family Name must end on a letter");
         return false;
     }
-    return true;
-}
-
-
-function validatePhoneNumber(phone_number_element)
-{
-    const phone_number = phone_number_element.value;
-    if (phone_number === "")
-    {
-        return true;
-    }
-    if (phone_number.length != 9)
-    {
-        setError(phone_number_element, "Phone Number must be 9 characters long");
-        return false;
-    }
-    if (!phone_number.match(PHONE_NUMBER_PATTERN))
-    {
-        setError(phone_number_element, "Phone Number must contain only numbers");
-        return false;
-    }
+    setSuccess(family_name_element);
     return true;
 }
 
@@ -197,5 +197,28 @@ function validateEmail(email_element)
         setError(email_element, "Email's Top Level Domain must contain 2 to 4 letters");
         return false;
     }
+    setSuccess(email_element);
+    return true;
+}
+
+
+function validatePhoneNumber(phone_number_element)
+{
+    const phone_number = phone_number_element.value;
+    if (phone_number === "")
+    {
+        return true;
+    }
+    if (phone_number.length != 9)
+    {
+        setError(phone_number_element, "Phone Number must be 9 characters long");
+        return false;
+    }
+    if (!phone_number.match(PHONE_NUMBER_PATTERN))
+    {
+        setError(phone_number_element, "Phone Number must contain only numbers");
+        return false;
+    }
+    setSuccess(phone_number_element);
     return true;
 }
