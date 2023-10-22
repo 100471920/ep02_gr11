@@ -10,46 +10,80 @@
     </head>
     <body>
         <header class="flex-x">
-            <div class="flex-x grow center paso">
+            <div class="flex-x box-grow center paso">
                 <paso1>
                     <p>Select  products</p>
                 </paso1>
             </div>
-            <div class="flex-x grow center paso">
+            <div class="flex-x box-grow center paso">
                 <paso2>
                     <p>Review and pay</p>
                 </paso2>
             </div>
-            <div class="flex-x grow center paso">
+            <div class="flex-x box-grow center paso">
                 <paso3>
                     <p>Order status</p>
                 </paso3>
             </div>
         </header>
-        <article class="flex-y grow">
-            <section class="flex-y grow">
-                <div class="flex-x grow center">
+        <article class="flex-y box-grow">
+            <section class="flex-y box-grow">
+                <div class="flex-x box-grow center">
                     <p>Drinks</p>
                 </div>
-                <div class="flex-y grow">
-                    <div class="flex-x grow center">
-                        <p>Drink1</p>
+                <div class="flex-y box-grow">
+                    <div class="flex-x box-grow center">
+                        <div class="flex-x box-grow center product-name">
+                            <p>Drink1</p>
+                        </div>
+                        <div class="flex-x box-grow center product-price">
+                            <p>9$</p>
+                        </div>
                     </div>
-                    <div class="flex-x grow">
-                        <div class="flex-x grow center">
-                            <button class="btn btn-add" onclick="add_product('drink1')">AÑADIR</button>
+                    <div class="flex-x box-grow center">
+                        <div class="flex-x box-grow center">
+                            <button class="btn btn-add" onclick="add_product('Drink1')">AÑADIR</button>
                         </div>
-                        <div class="flex-x grow center">
-                            <input class="Quantity" type="number" name="Cantidad" min="0" max="100" value= "1" placehorder ="Cantidad" />
+                        <div class="flex-x box-grow center">
+                            <input  class="Quantity btn" type="number" name="Cantidad" min="0" max="100" value="1" placeholder="Cantidad" >
                         </div>
-                        <div class="flex-x grow center">
-                            <button class="btn btn-remove"  onclick="remove_product('drink1')">QUITAR</button>
+                        <div class="flex-x box-grow center">
+                            <button class="btn btn-remove" onclick="remove_product('Drink1')">QUITAR</button>
                         </div>
                     </div> 
-                    <div class="flex-x grow">
+                </div>
+            </div>
+            <div class="flex-x box-grow">
+                <p>[imagen]</p>
+            </div>  
+            <ul id="ShopingList"></ul>
+
+                <div class="flex-y box-grow">
+                    <div class="flex-x box-grow center">
+                        <div class="flex-x box-grow center product-name">
+                            <p>Drink2</p>
+                        </div>
+                        <div class="flex-x box-grow center product-price">
+                            <p>5$</p>
+                        </div>
+                    </div>
+                    <div class="flex-x box-grow center">
+                        <div class="flex-x box-grow center">
+                            <button class="btn btn-add" onclick="add_product('Drink2')">AÑADIR</button>
+                        </div>
+                        <div class="flex-x input-box-grow center">
+                            <input  class="Quantity btn" type="number" name="Cantidad" min="0" max="100" value="1" placeholder="Cantidad" >
+                        </div>
+                        <div class="flex-x box-grow center">
+                            <button class="btn btn-remove" onclick="remove_product('Drink2')">QUITAR</button>
+                        </div>
+                    </div> 
+                </div>
+                    <div class="flex-x box-grow">
                         <p>[imagen]</p>
                     </div>  
-                    <ul id="myList"></ul>
+                    <ul id="ShopingList"></ul>
+
                 
             </section>
 

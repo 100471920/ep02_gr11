@@ -58,7 +58,7 @@ h1
 }
 h2
 {
-    font-size: max(2.5dvw, 25px);
+    font-size: 7.5dvw;
 }
 p
 {
@@ -81,8 +81,6 @@ a
 
 img
 {
-    max-height: 100%;
-    max-width: 100%;
     object-fit: contain;
 }
 
@@ -91,12 +89,62 @@ figure
     margin: inherit;
 }
 
-video
+img, video, iframe
 {
     max-height: 100%;
     max-width: 100%;
+}
+
+#about, #drinks, #meals, #join, #contact
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+#about
+{
+    background-position-x: left;
+    background-image: url("../media/images/backgrounds/bck_about.jpg");
+}
+#drinks
+{
+    background-position-x: center;
+    background-image: url("../media/images/backgrounds/bck_drinks.jpg");
+}
+#meals
+{
+    background-position-x: center;
+    background-image: url("../media/images/backgrounds/bck_meals.jpg");
+}
+#join
+{
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background-position-x: center;
+    background-image: url("../media/images/backgrounds/bck_join.jpg");
+    gap: 5%;
+    padding: 10%;
+}
+#contact
+{
+    background-position-x: right;
+    background-image: url("../media/images/backgrounds/bck_contact.jpg");
+}
+
+video
+{
     aspect-ratio: 16/9;
-    margin: inherit;
+}
+
+.map
+{
+    max-height: 100%;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-grow: 1;
+    border: 3px solid rgb(150, 150, 150);
 }
 
 header, footer
@@ -115,9 +163,9 @@ footer
     justify-content: center;
     align-items: center;
 }
-footer > .flex-x > p
+.light-text
 {
-    font-size: 3dvw;
+    font-size: max(1dvw, 15px);
     font-family: "Ubuntu-L", "sans-serif";
     color: rgba(255, 255, 255, 0.8);
 }
@@ -126,6 +174,7 @@ nav
 {
     position: absolute;
     display: none;
+    padding: 7.5%;
 }
 
 form
@@ -138,10 +187,18 @@ nav, form
     height: 100%;
     width: 100%;
     flex-direction: column;
-    justify-content: center;
     align-content: center;
     gap: 5%;
-    padding: 7.5%;
+}
+
+.center-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 5dvh;
+    padding: 12.5%;
 }
 
 section
@@ -150,18 +207,29 @@ section
     width: 100dvw;
     display: flex;
     flex-direction: column;
-    background-color: rgb(0, 0, 0);
 }
 
-input, textarea
+.subsection
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 8%;
+}
+
+input, textarea, .cancel-box
 {
     height: 100%;
     width: 100%;
-    padding: 12px;
-    border: 0px;
-    /*background-color: transparent;*/
+    padding: 3.5dvw;
+    border: 1px solid rgb(150, 150, 150);
+    background-color: rgba(80, 80, 80, 0.85);
+    font-size: max(1.5dvw, 20px);
+    font-variant: small-caps;
     font-family: "Norse-R", "Ubuntu-R", "sans-serif";
-    /*color: rgb(255, 255, 255);*/
+    color: rgb(255, 255, 255);
+    user-select: none;
     outline: none;
 }
 
@@ -189,15 +257,36 @@ input, textarea
     align-items: center;
 }
 
-.center_box
+.flex-box-y, .flex-box-x, .social_media_box
 {
     max-height: 100%;
     max-width: 100%;
     position: relative;
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    text-align: center;
+}
+.flex-box-y
+{
+    flex-direction: column;
+}
+.flex-box-x
+{
+    flex-direction: row;
+}
+
+#about_texts
+{
+    flex-direction: column;
+    gap: 7.5dvh;
+}
+
+.social_media_box
+{
+    flex-direction: column;
+    padding: 10%;
     align-items: center;
+    gap: 5%;
 }
 
 .logo_box
@@ -231,7 +320,7 @@ input, textarea
     cursor: pointer;
 }
 
-.input-box, .textarea-box
+.input-box, .textarea-box, .input-box-grow
 {
     display: flex;
     flex-direction: column;
@@ -239,12 +328,31 @@ input, textarea
 .textarea-box
 {
     flex-grow: 1;
+    aspect-ratio: 2/1;
+}
+.input-box-grow, .box-grow
+{
+    flex-grow: 1;
 }
 .input-error-box
 {
-    font-size: 15px;
+    font-size: max(1dvw, 15px);
     font-family: "Ubuntu-R", "sans-serif";
-    color: red;
+    color: rgb(255, 65, 65);
+    text-align: left;
+    padding-left: 25px;
+}
+
+.form-options
+{
+    display: flex;
+    flex-direction: row;
+    gap: 7.5%;
+    margin-top: 2%;
+}
+.form-option
+{
+    background-color: rgba(40, 40, 40, 0.85);
 }
 
 .center
@@ -285,20 +393,36 @@ input, textarea
 }
 
 
+
 @media screen and (min-width: 600px)
 {
 
 }
 @media screen and (min-width: 768px)
 {
+    h2
+    {
+        font-size: 3dvw;
+    }
+
     nav
     {
         display: flex;
     }
 
+    header
+    {
+        display: none;
+    }
+
+    input, textarea, .cancel-box
+    {
+        padding: 1dvw;
+    }
+    
     section
     {
-        max-height: 100dvh;
+        height: 100dvh;
     }
 
     .nav_section
@@ -306,13 +430,67 @@ input, textarea
         display: flex;
     }
 
+    .map
+    {
+        aspect-ratio:initial;
+    }
+    .textarea-box
+    {
+        aspect-ratio:initial;
+    }
+
+    .social_media_box
+    {
+        flex-direction: row;
+        padding: 1.5%;
+    }
+
     #home
     {
         flex-direction: row-reverse;
     }
 
-    #contact
+    #join
     {
+        padding: 4.5% 17.5%;
+    }
+
+    #contact_loc_form
+    {
+        height: 90%;
+        width: 100%;
+        display: flex;
         flex-direction: row;
+    }
+    #contact_loc, #contact_form
+    {
+        height: 100%;
+        width: 50%;
+        padding: 3%;
+    }
+
+    #social_media
+    {
+        height: 10%;
+        width: 100%;
+    }
+    #social_media_header
+    {
+        display: none;
+    }
+
+    #about_text
+    {
+        height: 100%;
+        width: 40%;
+        padding: 3%;
+    }
+    #about_texts
+    {
+        flex-grow: 1;
+    }
+    .subsection
+    {
+        justify-content: center;
     }
 }

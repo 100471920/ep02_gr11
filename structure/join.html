@@ -15,40 +15,45 @@
         <title>MJÖLNIR - Join</title>
     </head>
     <body>
-        <section>
-            <div class="center_box">
+        <section id="join">
+            <div class="flex-box-y">
                 <h2>Join Us</h2>
             </div>
-            <form method="get" name="join_form" autocomplete="on" accept-charset="UTF-8">
-                <div class="input-box">
-                    <input type="text" name="id_number" placeholder="ID Number">
-                    <div class="input-error-box"></div>
-                </div>
-                <div class="input-box">
-                    <input type="text" name="name" placeholder="Name">
-                    <div class="input-error-box"></div>
-                </div>
-                <div class="input-box">
-                    <input type="text" name="family_name" placeholder="Family Name">
-                    <div class="input-error-box"></div>
-                </div>
-                <div class="input-box">
-                    <input type="text" name="email" placeholder="Email">
-                    <div class="input-error-box"></div>
-                </div>
-                <div class="input-box">
-                    <input type="text" name="phone_number" placeholder="Phone Number">
-                    <div class="input-error-box"></div>
-                </div>
-                <div>
-                    <div class="input-box">
-                        <input type="reset" value="Reset">
+            <div class="flex-box-y box-grow">
+                <form class="flex-box-y" method="get" name="join_form" autocomplete="on" accept-charset="UTF-8">
+                    <div class="input-box-grow">
+                        <input type="text" name="id_number" placeholder="ID Number">
+                        <div class="input-error-box"></div>
                     </div>
-                    <div class="input-box">
-                        <input type="submit" value="Submit">
+                    <div class="input-box-grow">
+                        <input type="text" name="name" placeholder="Name">
+                        <div class="input-error-box"></div>
                     </div>
-                </div>
-            </form>
+                    <div class="input-box-grow">
+                        <input type="text" name="family_name" placeholder="Family Name">
+                        <div class="input-error-box"></div>
+                    </div>
+                    <div class="input-box-grow">
+                        <input type="text" name="email" placeholder="Email">
+                        <div class="input-error-box"></div>
+                    </div>
+                    <div class="input-box-grow">
+                        <input type="text" name="phone_number" placeholder="Phone Number">
+                        <div class="input-error-box"></div>
+                    </div>
+                    <div class="form-options">
+                        <div class="input-box-grow" onclick="closeWindow()">
+                            <div class="cancel-box form-option">Cancel</div>
+                        </div>
+                        <div class="input-box-grow">
+                            <input class="form-option" type="reset" value="Reset">
+                        </div>
+                        <div class="input-box-grow form-option">
+                            <input class="form-option" type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
         </section>
         <script src="../script/form.js"></script>
     </body>

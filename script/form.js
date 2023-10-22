@@ -46,11 +46,29 @@ for (let i=0; i < forms.length; i++)
 function validateInputs(form)
 {
     const inputs = form.getElementsByTagName("input");
-    validateIDNumber(inputs[0]);
-    validateName(inputs[1]);
-    validateFamilyName(inputs[2]);
-    validateEmail(inputs[3]);
-    validatePhoneNumber(inputs[4]);
+    for (let i=0; i < inputs.length; i++)
+    {
+        if (inputs[i].name == "id_number")
+        {
+            validateIDNumber(inputs[i]);
+        }
+        else if (inputs[i].name == "name")
+        {
+            validateName(inputs[i]);
+        }
+        else if (inputs[i].name == "family_name")
+        {
+            validateFamilyName(inputs[i]);
+        }
+        else if (inputs[i].name == "email")
+        {
+            validateEmail(inputs[i]);
+        }
+        else if (inputs[i].name == "phone_number")
+        {
+            validatePhoneNumber(inputs[i]);
+        }
+    }
 }
 
 
@@ -221,4 +239,10 @@ function validatePhoneNumber(phone_number_element)
     }
     setSuccess(phone_number_element);
     return true;
+}
+
+
+function closeWindow()
+{
+    window.close();
 }
