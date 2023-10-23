@@ -54,11 +54,15 @@ h1, h2, h3, h4, h5, h6
 }
 h1
 {
-    font-size: max(3.5dvw, 25px);
+    font-size: 5.5dvw;
 }
 h2
 {
     font-size: 7.5dvw;
+}
+h3
+{
+    font-size: 6dvw;
 }
 p
 {
@@ -100,6 +104,10 @@ img, video, iframe
     background-size: cover;
     background-repeat: no-repeat;
     
+}
+#home
+{
+    gap: 2.5dvw;
 }
 #about
 {
@@ -147,6 +155,14 @@ video
     border: 3px solid rgb(150, 150, 150);
 }
 
+main
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(60, 60, 60);
+    gap: 5dvw;
+}
+
 header, footer
 {
     height: 12dvh;
@@ -175,6 +191,14 @@ nav
     position: absolute;
     display: none;
     padding: 7.5%;
+}
+.menu-btn
+{
+    display: flex;
+}
+.close-btn
+{
+    display: none;
 }
 
 form
@@ -257,7 +281,7 @@ input, textarea, .cancel-box
     align-items: center;
 }
 
-.flex-box-y, .flex-box-x, .social_media_box
+.flex-box-y, .flex-box-x, .social_media_box, .header_text, .nav_menu
 {
     max-height: 100%;
     max-width: 100%;
@@ -273,6 +297,20 @@ input, textarea, .cancel-box
 .flex-box-x
 {
     flex-direction: row;
+}
+
+.header_text
+{
+    justify-content: left;
+    gap: 3%;
+}
+
+.nav_menu
+{
+    aspect-ratio: 1/1;
+    flex-direction: column;
+    user-select: none;
+    cursor: pointer;
 }
 
 #about_texts
@@ -353,6 +391,7 @@ input, textarea, .cancel-box
 .form-option
 {
     background-color: rgba(40, 40, 40, 0.85);
+    cursor: pointer;
 }
 
 .center
@@ -396,13 +435,24 @@ input, textarea, .cancel-box
 
 @media screen and (min-width: 600px)
 {
-
+    h2
+    {
+        font-size: 6dvw;
+    }
+    h3
+    {
+        font-size: 4dvw;
+    }
 }
 @media screen and (min-width: 768px)
 {
     h2
     {
-        font-size: 3dvw;
+        font-size: max(3dvw, 35px);
+    }
+    h3
+    {
+        font-size: max(2dvw, 22.5px);
     }
 
     nav
@@ -448,6 +498,7 @@ input, textarea, .cancel-box
     #home
     {
         flex-direction: row-reverse;
+        gap: 0dvw;
     }
 
     #join

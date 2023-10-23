@@ -17,16 +17,17 @@
     </head>
     <body>
         <header>
-            <a class="flex-box-y" href="./index.html">
-                <figure class="flex-box-y logo_box">
+            <a class="header_text" href="./index.html">
+                <figure class="flex-box-x logo_box">
                     <img alt="MJÖLNIR logo" src="../media/images/logos/logo_mjolnir.png">
                 </figure>
                 <div class="title">
                     <h1>MJÖLNIR - The Nordic Mead Hall</h1>
                 </div>
             </a>
-            <div class="flex-box-y">
-                <span class="material-icons">menu</span>
+            <div class="nav_menu" onclick="toggleNavSections()">
+                <span class="menu-btn material-icons">menu</span>
+                <span class="close-btn material-icons">close</span>
             </div>
         </header>
         <main>
@@ -69,7 +70,7 @@
                     </div>
                 </div>
             </section>
-            <section id="drinks">
+            <section id="drinks" class="center-box">
                 <div class="flex-box-y">
                     <h2>Drinks</h2>
                 </div>
@@ -206,7 +207,7 @@
                                     <div class="input-box-grow">
                                         <input class="form-option" type="reset" value="Reset">
                                     </div>
-                                    <div class="input-box-grow form-option">
+                                    <div class="input-box-grow">
                                         <input class="form-option" type="submit" value="Submit">
                                     </div>
                                 </div>
@@ -237,7 +238,7 @@
                 <p class="light-text"><span>&copy;</span> 2023 | MJÖLNIR - The Nordic Mead Hall</p>
             </div>
         </footer>
-        <script src="../script/form.js"></script>
-        <script src="../script/main.js"></script>
+        <script defer src="../script/form.js"></script>
+        <script defer src="../script/main.js"></script>
     </body>
 </html>

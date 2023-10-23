@@ -44,3 +44,38 @@ function gotoSlide(slide_class, slide_index)
 {
     showSlide(slide_class, slide_index);
 }
+
+
+function toggleNavSections()
+{
+    const nav = document.getElementsByTagName("nav")[0];
+    const nav_sections = nav.getElementsByClassName("nav_section");
+    const nav_menu = document.getElementsByClassName("nav_menu")[0];
+    const nav_btn = nav_menu.getElementsByClassName("menu-btn")[0];
+    const close_btn = nav_menu.getElementsByClassName("close-btn")[0];
+
+    if (nav.style.display == "flex")
+    {
+        nav.style.display = "none";
+        nav_btn.style.display = "flex";
+        close_btn.style.display = "none";
+    }
+    else
+    {
+        nav.style.display = "flex";
+        nav_btn.style.display = "none";
+        close_btn.style.display = "flex";
+
+    }
+    for (let i=0; i < nav_sections.length; i++)
+    {
+        if (nav_sections[i].style.display == "flex")
+        {
+            nav_sections[i].style.display = "none";
+        }
+        else
+        {
+            nav_sections[i].style.display = "flex";
+        }
+    }
+}
