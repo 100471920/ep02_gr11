@@ -49,27 +49,27 @@ function toggleNavSections()
     const nav_btn = nav_menu.getElementsByClassName("menu-btn")[0];
     const close_btn = nav_menu.getElementsByClassName("close-btn")[0];
 
-    if (!nav.classList.contains("display-none"))
+    if (!nav.classList.contains("dnone"))
     {
-        nav.classList.add("display-none");
-        nav_btn.classList.remove("display-none");
-        close_btn.classList.add("display-none");
+        nav.classList.add("dnone");
+        nav_btn.classList.remove("dnone");
+        close_btn.classList.add("dnone");
     }
     else
     {
-        nav.classList.remove("display-none");
-        nav_btn.classList.add("display-none");
-        close_btn.classList.remove("display-none");
+        nav.classList.remove("dnone");
+        nav_btn.classList.add("dnone");
+        close_btn.classList.remove("dnone");
     }
     for (let i=0; i < nav_sections.length; i++)
     {
-        if (!nav_sections[i].classList.contains("display-none"))
+        if (!nav_sections[i].classList.contains("dnone"))
         {
-            nav_sections[i].classList.add("display-none");
+            nav_sections[i].classList.add("dnone");
         }
         else
         {
-            nav_sections[i].classList.remove("display-none");
+            nav_sections[i].classList.remove("dnone");
         }
     }
 }

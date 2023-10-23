@@ -99,7 +99,7 @@ img, video, iframe
     max-width: 100%;
 }
 
-#about, #drinks, #meals, #join, #menu, #contact
+#about, #drinks, #meals, #join, .menu, #contact
 {
     background-size: cover;
     background-repeat: no-repeat;
@@ -142,8 +142,12 @@ img, video, iframe
     gap: 5%;
     padding: 10%;
 }
-#menu
+.menu
 {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    gap: 5dvh;
     background-position-x: center;
     background-position-y: center;
     background-image: url("../media/images/backgrounds/bck_menu.jpg");
@@ -184,12 +188,22 @@ main
 header, footer
 {
     height: 12dvh;
+    flex-direction: row;
+}
+
+header, footer, #acciones
+{
     width: 100dvw;
     display: flex;
-    flex-direction: row;
     gap: 5%;
     padding: 2%;
     background-color: rgb(70, 70, 70);
+}
+#acciones
+{
+    height: 18dvh;
+    flex-direction: column;
+    gap: 15%;
 }
 
 footer
@@ -202,11 +216,6 @@ footer
     font-size: max(1dvw, 15px);
     font-family: "Ubuntu-L", "sans-serif";
     color: rgba(255, 255, 255, 0.8);
-}
-
-.display-none
-{
-    display: none;
 }
 
 nav
@@ -255,6 +264,15 @@ section
     height: 100%;
     width: 100%;
     gap: 8%;
+}
+
+.menu-content
+{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 input, textarea, .cancel-box
@@ -347,6 +365,23 @@ input, textarea, .cancel-box
     aspect-ratio: 1/1;
 }
 
+.progress_bar, .menu_options
+{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: 2%;
+}
+
+.menu-btn, .step-bar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+}
+
 .nav_section
 {
     display: flex;
@@ -415,11 +450,28 @@ input, textarea, .cancel-box
     justify-content: center;
 }
 
+.btn-options
+{
+    height: 100%;
+    width: auto;
+    position: relative;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    background-color: rgb(50, 50, 50);
+}
+
 .btn
 {
+    position: relative;
     text-align: center;
     vertical-align: middle;
     padding: .67em .76em;
+    cursor: pointer;
+}
+.icon-btn
+{
+    position: absolute;
+    user-select: none;
     cursor: pointer;
 }
 
@@ -441,14 +493,28 @@ input, textarea, .cancel-box
     font-weight: bold;
 }
 
+.step-text
+{
+    font-size: 3dvw;
+    font-family: "Ubuntu-R", "sans-serif";
+}
+
 .paso
 {
-    background-color: #da9f20;
-    border-color: #e66747;
-    border-style: solid;
+    background-color:  rgb(150, 150, 150);
+    border: 2px solid rgb(255, 255, 255);
     text-align: center;
     vertical-align: middle;
     padding: .67em .76em;
+}
+#paso1
+{
+    background-color: rgb(95, 115, 135);
+}
+
+.dnone, .display-none
+{
+    display: none;
 }
 
 
@@ -463,6 +529,10 @@ input, textarea, .cancel-box
     {
         font-size: 4dvw;
     }
+    .step-text
+    {
+        font-size: 3dvw;
+    }
 }
 @media screen and (min-width: 768px)
 {
@@ -473,6 +543,10 @@ input, textarea, .cancel-box
     h3
     {
         font-size: max(2dvw, 22.5px);
+    }
+    .step-text
+    {
+        font-size: max(1.5dvw, 18px);
     }
 
     nav
@@ -495,7 +569,7 @@ input, textarea, .cancel-box
         height: 100dvh;
     }
 
-    .display-none
+    .dnone
     {
         display: flex;
     }
@@ -586,5 +660,11 @@ input, textarea, .cancel-box
     .subsection
     {
         justify-content: center;
+    }
+    #acciones
+    {
+        height: min(15dvh, 100px);
+        flex-direction: row;
+        gap: 4%;
     }
 }

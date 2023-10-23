@@ -110,38 +110,51 @@ function createTable(data,id){
     }
     if(id=='ReviewList'){
         let li = document.createElement('li');
-        li.innerText ='Total a pagar : $'+ Total_price;
+        li.innerText ='Total a pagar :'+ Total_price+'$';
         list.appendChild(li);
     }
 }
 
-function showList(){
-    if (document.getElementById("ShopingList").style.display=="none"){
-        document.getElementById("ShopingList").style.display="flex"
-        //document.getElementById("btn-carro").style.backgroundColor='green';
-    }else {document.getElementById("ShopingList").style.display="none";};
-
+function showList()
+{
+    const shoping_list = document.getElementById("ShopingList");
+    let shoping_list_style = getComputedStyle(shoping_list);
+    if (shoping_list_style.display == "none")
+    {
+        shoping_list.style.display = "flex";
+    }
+    else
+    {
+        shoping_list.style.display = "none";
+    }
 }
 
-function avanzar(){
+
+function goForward(){
     if (document.getElementById("menu").style.display!="none"){
         document.getElementById("menu").style.display="none"
         document.getElementById("status").style.display="none"
         document.getElementById("pago").style.display="flex"
+        document.getElementById("paso2").style.backgroundColor="rgb(95, 115, 135)"
+        document.getElementById("paso1").style.backgroundColor="rgb(150, 150, 150)"
         createTable(ShopingList,'ReviewList')}
     
     else if (document.getElementById("pago").style.display!="none"){
         document.getElementById("pago").style.display="none"
         document.getElementById("menu").style.display="none"
         document.getElementById("status").style.display="flex"
+        document.getElementById("paso3").style.backgroundColor="rgb(95, 115, 135)"
+        document.getElementById("paso2").style.backgroundColor="rgb(150, 150, 150)"
         startTimer()
         }
 }
-function volver(){
+function goBack(){
     if (document.getElementById("pago").style.display!="none" ){
         document.getElementById("menu").style.display="flex"
         document.getElementById("pago").style.display="none"
         document.getElementById("status").style.display="none"
+        document.getElementById("paso1").style.backgroundColor="rgb(95, 115, 135)"
+        document.getElementById("paso2").style.backgroundColor="rgb(150, 150, 150)"
     }
     /*if (document.getElementById("status").style.display!="none" ){
         document.getElementById("menu").style.display="none"
