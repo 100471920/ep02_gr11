@@ -99,7 +99,7 @@ img, video, iframe
     max-width: 100%;
 }
 
-#about, #drinks, #meals, #join, #contact
+#about, #drinks, #meals, #join, #menu, #contact
 {
     background-size: cover;
     background-repeat: no-repeat;
@@ -111,17 +111,25 @@ img, video, iframe
 }
 #about
 {
+    display: flex;
+    flex-direction: column;
     background-position-x: left;
     background-image: url("../media/images/backgrounds/bck_about.jpg");
 }
 #drinks
 {
+    display: flex;
+    flex-direction: column;
     background-position-x: center;
+    background-position-y: center;
     background-image: url("../media/images/backgrounds/bck_drinks.jpg");
 }
 #meals
 {
+    display: flex;
+    flex-direction: column;
     background-position-x: center;
+    background-position-y: center;
     background-image: url("../media/images/backgrounds/bck_meals.jpg");
 }
 #join
@@ -134,6 +142,12 @@ img, video, iframe
     gap: 5%;
     padding: 10%;
 }
+#menu
+{
+    background-position-x: center;
+    background-position-y: center;
+    background-image: url("../media/images/backgrounds/bck_menu.jpg");
+}
 #contact
 {
     background-position-x: right;
@@ -145,6 +159,11 @@ video
     aspect-ratio: 16/9;
 }
 
+.border-content, .map
+{
+    border: 3px solid rgb(150, 150, 150);
+}
+
 .map
 {
     max-height: 100%;
@@ -152,7 +171,6 @@ video
     aspect-ratio: 1/1;
     display: flex;
     flex-grow: 1;
-    border: 3px solid rgb(150, 150, 150);
 }
 
 main
@@ -186,19 +204,16 @@ footer
     color: rgba(255, 255, 255, 0.8);
 }
 
+.display-none
+{
+    display: none;
+}
+
 nav
 {
     position: absolute;
-    display: none;
-    padding: 7.5%;
-}
-.menu-btn
-{
     display: flex;
-}
-.close-btn
-{
-    display: none;
+    padding: 7.5%;
 }
 
 form
@@ -334,7 +349,7 @@ input, textarea, .cancel-box
 
 .nav_section
 {
-    display: none;
+    display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
@@ -343,7 +358,7 @@ input, textarea, .cancel-box
     background-color: rgba(80, 80, 80, 0.8);
 }
 
-.slide
+.slide_text_drinks, .slide_drinks, .slide_text_meals, .slide_meals
 {
     display: none;
 }
@@ -428,7 +443,12 @@ input, textarea, .cancel-box
 
 .paso
 {
-    background-color: orange;
+    background-color: #da9f20;
+    border-color: #e66747;
+    border-style: solid;
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .76em;
 }
 
 
@@ -475,6 +495,10 @@ input, textarea, .cancel-box
         height: 100dvh;
     }
 
+    .display-none
+    {
+        display: flex;
+    }
     .nav_section
     {
         display: flex;
@@ -530,16 +554,35 @@ input, textarea, .cancel-box
         display: none;
     }
 
-    #about_text
+    #about, #meals
+    {
+        flex-direction: row;
+    }
+    #drinks
+    {
+        flex-direction: row-reverse;
+    }
+
+    .small-column, .big-column
     {
         height: 100%;
-        width: 40%;
         padding: 3%;
     }
+
+    .small-column
+    {
+        width: 45%;
+    }
+    .big-column
+    {
+        width: 55%;
+    }
+
     #about_texts
     {
         flex-grow: 1;
     }
+
     .subsection
     {
         justify-content: center;

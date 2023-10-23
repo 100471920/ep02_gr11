@@ -6,27 +6,33 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="../style/style.css">
         <link rel="icon" href="../media/images/logos/logo_mjolnir.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <title>MJÖLNIR - Menu</title>
     </head>
     <body>
-        <header class="flex-x">
-            <div class="flex-x box-grow center paso">
-                <paso1>
-                    <p>Select  products</p>
-                </paso1>
-            </div>
-            <div class="flex-x box-grow center paso">
-                <paso2>
-                    <p>Review and pay</p>
-                </paso2>
-            </div>
-            <div class="flex-x box-grow center paso">
-                <paso3>
-                    <p>Order status</p>
-                </paso3>
-            </div>
+        <header class="flex-y">
+            <section class="flex-x box-grow">
+                <div class="flex-x box-grow center paso" id="paso1">Select</div>
+                <div class="flex-x box-grow center paso" id="paso2">Review & pay</div>
+                <div class="flex-x box-grow center paso" id="paso3">Status</div>
+            </section>
+            <section class="flex-x box-grow center" id="acciones">
+                <div class="flex-x box-grow center">
+                    <button class="btn box-grow" onclick="volver()">VOLVER</button>
+                </div>
+                <div class="flex-x box-grow center">
+                    <button class="btn  box-grow" onclick="avanzar()">AVANZAR</button>
+                </div>
+                <div class="flex-x box-grow center">
+                    <button class="btn box-grow" onclick="showList()">VER CARRO</button>
+                </div>
+            </section>
         </header>
-        <article class="flex-y box-grow">
+
+        <article class="flex-y box-grow" id="menu">
+            <section class="flex-y box-grow center" id="ShopingList">
+                <ul class ="flex-y" ></ul>
+            </section>
             <section class="flex-y box-grow">
                 <div class="flex-x box-grow center">
                     <p>Drinks</p>
@@ -56,7 +62,6 @@
             <div class="flex-x box-grow">
                 <p>[imagen]</p>
             </div>  
-            <ul id="ShopingList"></ul>
 
                 <div class="flex-y box-grow">
                     <div class="flex-x box-grow center">
@@ -82,13 +87,26 @@
                     <div class="flex-x box-grow">
                         <p>[imagen]</p>
                     </div>  
-                    <ul id="ShopingList"></ul>
+
 
                 
             </section>
 
 
         </article>
+        <article class="flex-y box-grow slide" id="pago">
+            <section class="flex-y box-grow center" id="ReviewList">
+                <ul class ="flex-y" ></ul>
+            </section>
+        </article>
+        <article class="flex-y box-grow slide" id="status">
+            <section class="flex-y box-grow center"> RELOJ
+                <clock class="flex-x box-grow center" id="clock">clock</clock>
+                <adios></adios>
+            </section>
+        </article>
+        
+
         <script src="../script/menu.js"></script>
     </body>
 </html>

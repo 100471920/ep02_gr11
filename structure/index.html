@@ -27,30 +27,30 @@
             </a>
             <div class="nav_menu" onclick="toggleNavSections()">
                 <span class="menu-btn material-icons">menu</span>
-                <span class="close-btn material-icons">close</span>
+                <span class="close-btn display-none material-icons">close</span>
             </div>
         </header>
         <main>
             <section id="home">
                 <figure class="flex-box-y">
                     <img alt="MJÖLNIR gates" src="../media/images/backgrounds/bck_home.jpg">
-                    <nav>
-                        <a class="nav_section" href="#about"><h2>About</h2></a>
-                        <a class="nav_section" href="#drinks"><h2>Drinks</h2></a>
-                        <a class="nav_section" href="#meals"><h2>Meals</h2></a>
-                        <a class="nav_section" target="_blank" href="./menu.html"><h2>Menu</h2></a>
-                        <a class="nav_section" target="_blank" href="./join.html"><h2>Join</h2></a>
-                        <a class="nav_section" href="#contact"><h2>Contact</h2></a>
+                    <nav class="display-none">
+                        <a class="nav_section display-none" href="#about"><h2>About</h2></a>
+                        <a class="nav_section display-none" href="#drinks"><h2>Drinks</h2></a>
+                        <a class="nav_section display-none" href="#meals"><h2>Meals</h2></a>
+                        <a class="nav_section display-none" target="_blank" href="./menu.html"><h2>Menu</h2></a>
+                        <a class="nav_section display-none" target="_blank" href="./join.html"><h2>Join</h2></a>
+                        <a class="nav_section display-none" href="#contact"><h2>Contact</h2></a>
                     </nav>
                 </figure>
                 <div class="flex-box-y">
-                    <video controls="controls" autoplay="autoplay" muted="muted" loop="loop">
+                    <video class="border-content" controls="controls" autoplay="autoplay" muted="muted" loop="loop">
                         <source src="../media/videos/Mjolnir-and-Grimfrost-Our-Vision-and-Values.mp4">
                     </video>
                 </div>
             </section>
             <section id="about">
-                <div id="about_text" class="center-box">
+                <div class="small-column center-box">
                     <div class="flex-box-y">
                         <h2>About Us</h2>
                     </div>
@@ -69,107 +69,118 @@
                         </section>
                     </div>
                 </div>
+                <div class="big-column center-box">
+
+                </div>
             </section>
-            <section id="drinks" class="center-box">
-                <div class="flex-box-y">
-                    <h2>Drinks</h2>
+            <section id="drinks">
+                <div class="small-column center-box">
+                    <div class="flex-box-y">
+                        <h2>Drinks</h2>
+                    </div>
+                    <div class="flex-x">
+                        <section class="slide_text_drinks">
+                            <h3>Þórr's Strength</h3>
+                            <p>Þórr, the jqtunn slayer and champion of the Æsir, is also the strongest among them.<br>
+                                It is so that he was able to lift Jqrmungandr.<br>
+                                One of his preferred drinks is beer made of barley, dried cranberries and raspberries.</p>
+                        </section>
+                        <section class="slide_text_drinks">
+                            <h3>Níðhqggr's Blood</h3>
+                            <p>Níðhqggr, the dragon which gnaws the Yggdrasill's roots, has the sweetest blood among beasts.<br>
+                                It is mixed with hazelnuts, walnuts, red apples and red wine.</p>
+                        </section>
+                        <section class="slide_text_drinks">
+                            <h3>Óðinn's Wisdom</h3>
+                            <p>Óðinn, the Alfqðr and the wisest of all Æsir, became even wiser drinking from the Mead of Poetry.<br>
+                                It is known that it could be made from wolf's teeth, spruce bark and boiling mead.</p>
+                        </section>
+                        <section class="slide_text_drinks">
+                            <h3>Loki's Betrayal</h3>
+                            <p>Loki, the tricky and adopted Æsir, will lead the forces of chaos during Ragnarqk betraying his friends.<br>
+                                His last drink will be buffalo milk with berries, celery and garlic.</p>
+                        </section>
+                    </div>
                 </div>
-                <div class="flex-x">
-                    <section class="slide slide_text_drinks">
-                        <h3>Þórr's Strength</h3>
-                        <p>Þórr, the jqtunn slayer and champion of the Æsir, is also the strongest among them.<br>
-                            It is so that he was able to lift Jqrmungandr.<br>
-                            One of his preferred drinks is beer made of barley, dried cranberries and raspberries.</p>
-                    </section>
-                    <section class="slide slide_text_drinks">
-                        <h3>Níðhqggr's Blood</h3>
-                        <p>Níðhqggr, the dragon which gnaws the Yggdrasill's roots, has the sweetest blood among beasts.<br>
-                            It is mixed with hazelnuts, walnuts, red apples and red wine.</p>
-                    </section>
-                    <section class="slide slide_text_drinks">
-                        <h3>Óðinn's Wisdom</h3>
-                        <p>Óðinn, the Alfqðr and the wisest of all Æsir, became even wiser drinking from the Mead of Poetry.<br>
-                            It is known that it could be made from wolf's teeth, spruce bark and boiling mead.</p>
-                    </section>
-                    <section class="slide slide_text_drinks">
-                        <h3>Loki's Betrayal</h3>
-                        <p>Loki, the tricky and adopted Æsir, will lead the forces of chaos during Ragnarqk betraying his friends.<br>
-                            His last drink will be buffalo milk with berries, celery and garlic.</p>
-                    </section>
-                </div>
-                <figure class="flex-x">
-                    <div class="slide slide_drinks"
-                            onmouseover="stopSliding('slide_drinks')"
-                            onmouseout="resumeSliding('slide_drinks', 0)">
-                        <img alt="Thor's Strength drink" src="../media/images/contents/thor-s_strength.jpg">
+                <div class="big-column center-box">
+                    <figure class="flex-x">
+                        <div class="slide_drinks"
+                                onmouseover="stopSliding('slide_drinks')"
+                                onmouseout="showSlide('slide_drinks', 0)">
+                            <img alt="Thor's Strength drink" src="../media/images/contents/thor-s_strength.jpg">
+                        </div>
+                        <div class="slide_drinks"
+                                onmouseover="stopSliding('slide_drinks')"
+                                onmouseout="showSlide('slide_drinks', 1)">
+                            <img alt="Nidhogg's Blood drink" src="../media/images/contents/nidhogg-s_blood.jpg">
+                        </div>
+                        <div class="slide_drinks"
+                                onmouseover="stopSliding('slide_drinks')"
+                                onmouseout="showSlide('slide_drinks', 2)">
+                            <img alt="Odin's Wisdom drink" src="../media/images/contents/odin-s_wisdom.jpg">
+                        </div>
+                        <div class="slide_drinks"
+                                onmouseover="stopSliding('slide_drinks')"
+                                onmouseout="showSlide('slide_drinks', 3)">
+                            <img alt="Loki's Betrayal drink" src="../media/images/contents/loki-s_betrayal.jpg">
+                        </div>
+                    </figure>
+                    <div class="flex-x">
+                        <span class="navigation_dot"
+                            onclick="gotoSlide('slide_drinks', 0)"></span>
+                        <span class="navigation_dot"
+                            onclick="gotoSlide('slide_drinks', 1)"></span>
+                        <span class="navigation_dot"
+                            onclick="gotoSlide('slide_drinks', 2)"></span>
+                        <span class="navigation_dot"
+                            onclick="gotoSlide('slide_drinks', 3)"></span>
                     </div>
-                    <div class="slide slide_drinks"
-                            onmouseover="stopSliding('slide_drinks')"
-                            onmouseout="resumeSliding('slide_drinks', 1)">
-                        <img alt="Nidhogg's Blood drink" src="../media/images/contents/nidhogg-s_blood.jpg">
-                    </div>
-                    <div class="slide slide_drinks"
-                            onmouseover="stopSliding('slide_drinks')"
-                            onmouseout="resumeSliding('slide_drinks', 2)">
-                        <img alt="Odin's Wisdom drink" src="../media/images/contents/odin-s_wisdom.jpg">
-                    </div>
-                    <div class="slide slide_drinks"
-                            onmouseover="stopSliding('slide_drinks')"
-                            onmouseout="resumeSliding('slide_drinks', 3)">
-                        <img alt="Loki's Betrayal drink" src="../media/images/contents/loki-s_betrayal.jpg">
-                    </div>
-                </figure>
-                <div class="flex-x">
-                    <span class="navigation_dot"
-                        onclick="gotoSlide('slide_drinks', 0)"></span>
-                    <span class="navigation_dot"
-                        onclick="gotoSlide('slide_drinks', 1)"></span>
-                    <span class="navigation_dot"
-                        onclick="gotoSlide('slide_drinks', 2)"></span>
-                    <span class="navigation_dot"
-                        onclick="gotoSlide('slide_drinks', 3)"></span>
                 </div>
             </section>
             <section id="meals">
-                <div class="flex-box-y">
-                    <h2>Meals</h2>
+                <div class="small-column center-box">
+                    <div class="flex-box-y">
+                        <h2>Meals</h2>
+                    </div>
+                    <div class="flex-x">
+                        <section class="slide_text_meals">
+                            <h3>Jqrmungandr's Preys</h3>
+                            <p>Jqrmungandr, the unfathomably large sea serpent that encircles Miðgarðr, will fight against Þórr on Ragnarqk.<br>
+                                Among all preys, the herring is the most abundant. It is best eaten smoked with rosemary.</p>
+                        </section>
+                        <section class="slide_text_meals">
+                            <h3>Æsir's Glory</h3>
+                            <p>The Æsir, who live in the world Ásgarðr, have been preparing for Ragnarqk since long ago.<br>
+                                Until then, the Æsir's and Valhqll's warriors eat porridge with pork, onions and mushrooms in all their feasts.</p>
+                        </section>
+                        <section class="slide_text_meals">
+                            <h3>Fenrisúlfr's Skin</h3>
+                            <p>Fenrisúlfr, the giant wolf and son of Loki, will swallow Óðinn on Ragnarqk.<br>
+                                There is a spread rumor about the skin of the beast that says it is delicious as a soup of deer meat with bread, parsley and radish.</p>
+                        </section>
+                        <section class="slide_text_meals">
+                            <h3>Freyja's Beauty</h3>
+                            <p>Freyja is the most beautiful goddess of the Vanir.<br>
+                                Her beauty is thanks to her feeding. It is said that she eats pancakes with honey, highbush blueberry and red dogwood.</p>
+                        </section>
+                    </div>
                 </div>
-                <div class="flex-x">
-                    <section class="slide slide_text_meals">
-                        <h3>Jqrmungandr's Preys</h3>
-                        <p>Jqrmungandr, the unfathomably large sea serpent that encircles Miðgarðr, will fight against Þórr on Ragnarqk.<br>
-                            Among all preys, the herring is the most abundant. It is best eaten smoked with rosemary.</p>
-                    </section>
-                    <section class="slide slide_text_meals">
-                        <h3>Æsir's Glory</h3>
-                        <p>The Æsir, who live in the world Ásgarðr, have been preparing for Ragnarqk since long ago.<br>
-                            Until then, the Æsir's and Valhqll's warriors eat porridge with pork, onions and mushrooms in all their feasts.</p>
-                    </section>
-                    <section class="slide slide_text_meals">
-                        <h3>Fenrisúlfr's Skin</h3>
-                        <p>Fenrisúlfr, the giant wolf and son of Loki, will swallow Óðinn on Ragnarqk.<br>
-                            There is a spread rumor about the skin of the beast that says it is delicious as a soup of deer meat with bread, parsley and radish.</p>
-                    </section>
-                    <section class="slide slide_text_meals">
-                        <h3>Freyja's Beauty</h3>
-                        <p>Freyja is the most beautiful goddess of the Vanir.<br>
-                            Her beauty is thanks to her feeding. It is said that she eats pancakes with honey, highbush blueberry and red dogwood.</p>
-                    </section>
+                <div class="big-column center-box">
+                    <figure class="flex-x">
+                        <div class="slide_meals">
+                            <img alt="Jormungandr's Preys meal" src="../media/images/contents/jormungandr-s_preys.jpg">
+                        </div>
+                        <div class="slide_meals">
+                            <img alt="Aesir's Glory meal" src="../media/images/contents/aesir-s_glory.jpg">
+                        </div>
+                        <div class="slide_meals">
+                            <img alt="Fenrir's Skin meal" src="../media/images/contents/fenrir-s_skin.jpg">
+                        </div>
+                        <div class="slide_meals">
+                            <img alt="Freyja's Beauty meal" src="../media/images/contents/freyja-s_beauty.jpg">
+                        </div>
+                    </figure>
                 </div>
-                <figure class="flex-x">
-                    <div class="slide slide_meals">
-                        <img alt="Jormungandr's Preys meal" src="../media/images/contents/jormungandr-s_preys.jpg">
-                    </div>
-                    <div class="slide slide_meals">
-                        <img alt="Aesir's Glory meal" src="../media/images/contents/aesir-s_glory.jpg">
-                    </div>
-                    <div class="slide slide_meals">
-                        <img alt="Fenrir's Skin meal" src="../media/images/contents/fenrir-s_skin.jpg">
-                    </div>
-                    <div class="slide slide_meals">
-                        <img alt="Freyja's Beauty meal" src="../media/images/contents/freyja-s_beauty.jpg">
-                    </div>
-                </figure>
             </section>
             <section id="contact">
                 <div id="contact_loc_form">
