@@ -8,10 +8,10 @@
 let timeout_ids = {"slide_drinks": 0, "slide_meals": 0};
 
 
-//showSlide("slide_text_drinks");
+showSlide("slide_text_drinks");
 showSlide("slide_drinks");
-//showSlide("slide_text_meals");
-//showSlide("slide_meals");
+showSlide("slide_text_meals");
+showSlide("slide_meals");
 
 
 function showSlide(slide_class, slide_index=0)
