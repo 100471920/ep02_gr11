@@ -391,7 +391,15 @@ input, textarea, .cancel-box
     width: 33.33%;
 }
 
-.menu-btn, .step-bar
+.menu-btn
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+}
+.step-bar
 {
     display: flex;
     flex-direction: row;

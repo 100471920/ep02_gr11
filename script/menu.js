@@ -146,7 +146,8 @@ function goForward(){
         document.getElementById("paso3").style.backgroundColor="rgb(95, 115, 135)"
         document.getElementById("paso2").style.backgroundColor="rgb(150, 150, 150)"
         startTimer()
-        window.sessionStorage.setItem("shoping_list", ShopingList)}
+        window.sessionStorage.setItem("shoping_list", ShopingList)
+        }
 }
 function goBack(){
     if (document.getElementById("pago").style.display!="none" ){
@@ -156,30 +157,40 @@ function goBack(){
         document.getElementById("paso1").style.backgroundColor="rgb(95, 115, 135)"
         document.getElementById("paso2").style.backgroundColor="rgb(150, 150, 150)"
     }
+}
+
+function parpadeo()
+{   
+    const clock = document.getElementById("clock");
+    let clock_style = getComputedStyle(clock);
+    clock.style.display = "none";
+    setTimeout(function(){clock.style.display = "flex";},300)
 
 }
+
+
 function startTimer(){
     var countDownTime = 10;
     var seconds_passed = 0
     var x = setInterval(function() {
 
-        
-    var distance = (countDownTime - seconds_passed)*1000;
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    seconds_passed = seconds_passed + 1    
+        parpadeo()
+        var distance = (countDownTime - seconds_passed)*1000;
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        seconds_passed = seconds_passed + 1    
 
-    if(seconds<10){seconds= "0"+seconds}
-    if(minutes<10){minutes= "0"+minutes}
-    document.getElementById("clock").innerHTML = minutes + "m " + seconds + "s ";
-        
+        if(seconds<10){seconds= "0"+seconds}
+        if(minutes<10){minutes= "0"+minutes}
+        document.getElementById("clock").innerHTML = minutes + "m " + seconds + "s ";
 
-    if (distance < 0) {
-        clearInterval(x); 
-        document.getElementById("clock").innerHTML = "EXPIRED";
-        endTimer();
-        
-    }
+
+        if (distance < 0) {
+            clearInterval(x); 
+            document.getElementById("clock").innerHTML = "REDIRECTING";
+            endTimer();
+            
+        }
     }, 1000);
 }
 
@@ -187,5 +198,4 @@ function endTimer(){
     var timer = setTimeout(function() {
     window.location.href = '../structure/index.html'
 }, 3000);
-
 }
