@@ -99,7 +99,7 @@ img, video, iframe
     max-width: 100%;
 }
 
-#about, #drinks, #meals, #join, .menu, #contact
+#home, #about, #drinks, #meals, #join, .menu, #contact
 {
     background-size: cover;
     background-repeat: no-repeat;
@@ -166,6 +166,7 @@ video
 .border-content, .map
 {
     border: 3px solid rgb(150, 150, 150);
+    background-color: rgba(80, 80, 80, 0.85);
 }
 
 .map
@@ -290,7 +291,7 @@ input, textarea, .cancel-box
     outline: none;
 }
 
-.flex-x
+.flex-x, .nav_dots, .img_text
 {
     max-height: 100%;
     max-width: 100%;
@@ -305,6 +306,13 @@ input, textarea, .cancel-box
     flex-direction: column;
 }
 
+.nav_dots
+{
+    height: 10%;
+    width: 100%;
+    justify-content: center;
+}
+
 .title
 {
     max-height: 100%;
@@ -314,7 +322,7 @@ input, textarea, .cancel-box
     align-items: center;
 }
 
-.flex-box-y, .flex-box-x, .social_media_box, .header_text, .nav_menu
+.flex-box-y, .flex-box-x, .social_media_box, .header_text, .nav_menu, .home_text
 {
     max-height: 100%;
     max-width: 100%;
@@ -332,7 +340,12 @@ input, textarea, .cancel-box
     flex-direction: row;
 }
 
-.header_text
+.home_text
+{
+    display: none;
+}
+
+.header_text, .home_text
 {
     justify-content: left;
     gap: 3%;
@@ -373,13 +386,17 @@ input, textarea, .cancel-box
     gap: 2%;
 }
 
+.step-bar
+{
+    width: 33.33%;
+}
+
 .menu-btn, .step-bar
 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 33.33%;
 }
 
 .nav_section
@@ -393,17 +410,31 @@ input, textarea, .cancel-box
     background-color: rgba(80, 80, 80, 0.8);
 }
 
-.slide_text_drinks, .slide_drinks, .slide_text_meals, .slide_meals
+.align-bottom
 {
+    justify-content: end;
+}
+
+.slide_about .slide_text_drinks, .slide_drinks, .slide_text_meals, .slide_meals
+{
+    width: 100%;
+    height: 100%;
     display: none;
+    text-align: center;
+    justify-content: center;
+}
+.slide_text_drinks, .slide_text_meals
+{
+    height: 35dvh;
+    gap: 10%;
 }
 
 .navigation_dot
 {
-    height: 25px;
-    width: 25px;
-    background-color: brown;
-    border: 2px solid rgb(207, 207, 207);
+    height: 20px;
+    width: 20px;
+    background-color: rgb(80, 80, 80);
+    border: 1px solid rgb(150, 150, 150);
     margin: 8px 8px;
     cursor: pointer;
 }
@@ -418,10 +449,24 @@ input, textarea, .cancel-box
     flex-grow: 1;
     aspect-ratio: 2/1;
 }
-.input-box-grow, .box-grow
+.input-box-grow, .box-grow, .img_text
 {
     flex-grow: 1;
 }
+
+.img_text
+{
+    border: 1px solid rgb(150, 150, 150);
+    background-color: rgba(80, 80, 80, 0.85);
+    padding: 10%;
+    text-align: center;
+}
+
+.img-drinks, .img-meals, .img-about
+{
+    border: 1px solid rgb(150, 150, 150);
+}
+
 .input-error-box
 {
     font-size: max(1dvw, 15px);
@@ -512,11 +557,19 @@ input, textarea, .cancel-box
     background-color: rgb(95, 115, 135);
 }
 
+.img-box
+{
+    gap: 1dvh;
+}
+
 .dnone, .display-none
 {
     display: none;
 }
-
+.big-letters
+{
+    font-size: max(15dvw,30px);
+}
 
 
 @media screen and (min-width: 600px)
@@ -532,6 +585,12 @@ input, textarea, .cancel-box
     .step-text
     {
         font-size: 3dvw;
+    }
+
+    .navigation_dot
+    {
+        height: 25px;
+        width: 25px;
     }
 }
 @media screen and (min-width: 768px)
@@ -596,7 +655,16 @@ input, textarea, .cancel-box
     #home
     {
         flex-direction: row-reverse;
+        background-position-x: center;
+        background-position-y: bottom;
+        background-image: url("../media/images/backgrounds/bck_home.jpg");
         gap: 0dvw;
+        
+    }
+
+    #img-home
+    {
+        display: none;
     }
 
     #join
@@ -666,5 +734,28 @@ input, textarea, .cancel-box
         height: min(15dvh, 100px);
         flex-direction: row;
         gap: 4%;
+    }
+
+    #title-home
+    {
+        font-size: 30px;
+    }
+
+    .home_text
+    {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgb(150, 150, 150);
+        background-color: rgba(80, 80, 80, 0.85);
+        padding: 5%;
+        overflow: hidden;
+    }
+
+    .no-padding
+    {
+        padding: 0%;
     }
 }

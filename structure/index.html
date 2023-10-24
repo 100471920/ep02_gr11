@@ -32,8 +32,8 @@
         </header>
         <main>
             <section id="home">
-                <figure class="flex-box-y">
-                    <img alt="MJÖLNIR gates" src="../media/images/backgrounds/bck_home.jpg">
+                <figure class="flex-box-y big-column">
+                    <img id="img-home" alt="MJÖLNIR gates" src="../media/images/backgrounds/bck_home.jpg">
                     <nav class="dnone">
                         <a class="nav_section dnone" href="#about"><h2>About</h2></a>
                         <a class="nav_section dnone" href="#drinks"><h2>Drinks</h2></a>
@@ -43,7 +43,15 @@
                         <a class="nav_section dnone" href="#contact"><h2>Contact</h2></a>
                     </nav>
                 </figure>
-                <div class="flex-box-y">
+                <div class="flex-box-y align-bottom small-column no-padding">
+                    <a class="home_text" href="./index.html">
+                        <figure class="flex-box-y logo_box">
+                            <img alt="MJÖLNIR logo" src="../media/images/logos/logo_mjolnir.png">
+                        </figure>
+                        <div class="title">
+                            <h1 id="title-home">MJÖLNIR - The Nordic Mead Hall</h1>
+                        </div>
+                    </a>
                     <video class="border-content" controls="controls" autoplay="autoplay" muted="muted" loop="loop">
                         <source src="../media/videos/Mjolnir-and-Grimfrost-Our-Vision-and-Values.mp4">
                     </video>
@@ -69,8 +77,39 @@
                         </section>
                     </div>
                 </div>
-                <div class="big-column center-box">
-
+                <div class="big-column center-box img-box">
+                    <figure class="flex-x">
+                        <div class="slide_about">
+                            <img class="img-about" alt="About 1" src="../media/images/contents/about_1.jpg"
+                                onmouseover="stopSliding('slide_about', null)"
+                                onmouseout="resumeSliding('slide_about', null, 0)">
+                        </div>
+                        <div class="slide_about">
+                            <img class="img-about" alt="About 2" src="../media/images/contents/about_2.jpg"
+                            onmouseover="stopSliding('slide_about', null)"
+                            onmouseout="resumeSliding('slide_about', null, 1)">
+                        </div>
+                        <div class="slide_about">
+                            <img class="img-about" alt="About 3" src="../media/images/contents/about_3.jpg"
+                            onmouseover="stopSliding('slide_about', null)"
+                            onmouseout="resumeSliding('slide_about', null, 2)">
+                        </div>
+                        <div class="slide_about">
+                            <img class="img-about" alt="About 4" src="../media/images/contents/about_4.jpg"
+                            onmouseover="stopSliding('slide_about', null)"
+                            onmouseout="resumeSliding('slide_about', null, 3)">
+                        </div>
+                    </figure>
+                    <div class="nav_dots">
+                        <span class="navigation_dot"
+                            onclick="gotoSlide('slide_about', null, 0)"></span>
+                        <span class="navigation_dot"
+                        onclick="gotoSlide('slide_about', null, 1)"></span>
+                        <span class="navigation_dot"
+                        onclick="gotoSlide('slide_about', null, 2)"></span>
+                        <span class="navigation_dot"
+                        onclick="gotoSlide('slide_about', null, 3)"></span>
+                    </div>
                 </div>
             </section>
             <section id="drinks">
@@ -78,7 +117,7 @@
                     <div class="flex-box-y">
                         <h2>Drinks</h2>
                     </div>
-                    <div class="flex-x">
+                    <div class="img_text center">
                         <section class="slide_text_drinks">
                             <h3>Þórr's Strength</h3>
                             <p>Þórr, the jqtunn slayer and champion of the Æsir, is also the strongest among them.<br>
@@ -102,38 +141,38 @@
                         </section>
                     </div>
                 </div>
-                <div class="big-column center-box">
+                <div class="big-column center-box img-box">
                     <figure class="flex-x">
-                        <div class="slide_drinks"
-                                onmouseover="stopSliding('slide_drinks')"
-                                onmouseout="showSlide('slide_drinks', 0)">
-                            <img alt="Thor's Strength drink" src="../media/images/contents/thor-s_strength.jpg">
+                        <div class="slide_drinks">
+                            <img class="img-drinks" alt="Thor's Strength drink" src="../media/images/contents/thor-s_strength.jpg"
+                                onmouseover="stopSliding('slide_drinks', 'slide_text_drinks')"
+                                onmouseout="resumeSliding('slide_drinks', 'slide_text_drinks', 0)">
                         </div>
-                        <div class="slide_drinks"
-                                onmouseover="stopSliding('slide_drinks')"
-                                onmouseout="showSlide('slide_drinks', 1)">
-                            <img alt="Nidhogg's Blood drink" src="../media/images/contents/nidhogg-s_blood.jpg">
+                        <div class="slide_drinks">
+                            <img class="img-drinks" alt="Nidhogg's Blood drink" src="../media/images/contents/nidhogg-s_blood.jpg"
+                                onmouseover="stopSliding('slide_drinks', 'slide_text_drinks')"
+                                onmouseout="resumeSliding('slide_drinks', 'slide_text_drinks', 1)">
                         </div>
-                        <div class="slide_drinks"
-                                onmouseover="stopSliding('slide_drinks')"
-                                onmouseout="showSlide('slide_drinks', 2)">
-                            <img alt="Odin's Wisdom drink" src="../media/images/contents/odin-s_wisdom.jpg">
+                        <div class="slide_drinks">
+                            <img class="img-drinks" alt="Odin's Wisdom drink" src="../media/images/contents/odin-s_wisdom.jpg"
+                                onmouseover="stopSliding('slide_drinks', 'slide_text_drinks')"
+                                onmouseout="resumeSliding('slide_drinks', 'slide_text_drinks', 2)">
                         </div>
-                        <div class="slide_drinks"
-                                onmouseover="stopSliding('slide_drinks')"
-                                onmouseout="showSlide('slide_drinks', 3)">
-                            <img alt="Loki's Betrayal drink" src="../media/images/contents/loki-s_betrayal.jpg">
+                        <div class="slide_drinks">
+                            <img class="img-drinks" alt="Loki's Betrayal drink" src="../media/images/contents/loki-s_betrayal.jpg"
+                                onmouseover="stopSliding('slide_drinks', 'slide_text_drinks')"
+                                onmouseout="resumeSliding('slide_drinks', 'slide_text_drinks', 3)">
                         </div>
                     </figure>
-                    <div class="flex-x">
+                    <div class="nav_dots">
                         <span class="navigation_dot"
-                            onclick="gotoSlide('slide_drinks', 0)"></span>
+                            onclick="gotoSlide('slide_drinks', 'slide_text_drinks', 0)"></span>
                         <span class="navigation_dot"
-                            onclick="gotoSlide('slide_drinks', 1)"></span>
+                            onclick="gotoSlide('slide_drinks', 'slide_text_drinks', 1)"></span>
                         <span class="navigation_dot"
-                            onclick="gotoSlide('slide_drinks', 2)"></span>
+                            onclick="gotoSlide('slide_drinks', 'slide_text_drinks', 2)"></span>
                         <span class="navigation_dot"
-                            onclick="gotoSlide('slide_drinks', 3)"></span>
+                            onclick="gotoSlide('slide_drinks', 'slide_text_drinks', 3)"></span>
                     </div>
                 </div>
             </section>
@@ -142,7 +181,7 @@
                     <div class="flex-box-y">
                         <h2>Meals</h2>
                     </div>
-                    <div class="flex-x">
+                    <div class="img_text center">
                         <section class="slide_text_meals">
                             <h3>Jqrmungandr's Preys</h3>
                             <p>Jqrmungandr, the unfathomably large sea serpent that encircles Miðgarðr, will fight against Þórr on Ragnarqk.<br>
@@ -165,21 +204,39 @@
                         </section>
                     </div>
                 </div>
-                <div class="big-column center-box">
+                <div class="big-column center-box img-box">
                     <figure class="flex-x">
                         <div class="slide_meals">
-                            <img alt="Jormungandr's Preys meal" src="../media/images/contents/jormungandr-s_preys.jpg">
+                            <img class="img-meals" alt="Jormungandr's Preys meal" src="../media/images/contents/jormungandr-s_preys.jpg"
+                                onmouseover="stopSliding('slide_meals', 'slide_text_meals')"
+                                onmouseout="resumeSliding('slide_meals', 'slide_text_meals', 0)">
                         </div>
                         <div class="slide_meals">
-                            <img alt="Aesir's Glory meal" src="../media/images/contents/aesir-s_glory.jpg">
+                            <img class="img-meals" alt="Aesir's Glory meal" src="../media/images/contents/aesir-s_glory.jpg"
+                                onmouseover="stopSliding('slide_meals', 'slide_text_meals')"
+                                onmouseout="resumeSliding('slide_meals', 'slide_text_meals', 1)">
                         </div>
                         <div class="slide_meals">
-                            <img alt="Fenrir's Skin meal" src="../media/images/contents/fenrir-s_skin.jpg">
+                            <img class="img-meals" alt="Fenrir's Skin meal" src="../media/images/contents/fenrir-s_skin.jpg"
+                                onmouseover="stopSliding('slide_meals', 'slide_text_meals')"
+                                onmouseout="resumeSliding('slide_meals', 'slide_text_meals', 2)">
                         </div>
                         <div class="slide_meals">
-                            <img alt="Freyja's Beauty meal" src="../media/images/contents/freyja-s_beauty.jpg">
+                            <img class="img-meals" alt="Freyja's Beauty meal" src="../media/images/contents/freyja-s_beauty.jpg"
+                                onmouseover="stopSliding('slide_meals', 'slide_text_meals')"
+                                onmouseout="resumeSliding('slide_meals', 'slide_text_meals', 3)">
                         </div>
                     </figure>
+                    <div class="nav_dots">
+                        <span class="navigation_dot"
+                            onclick="gotoSlide('slide_meals', 'slide_text_meals', 0)"></span>
+                        <span class="navigation_dot"
+                            onclick="gotoSlide('slide_meals', 'slide_text_meals', 1)"></span>
+                        <span class="navigation_dot"
+                            onclick="gotoSlide('slide_meals', 'slide_text_meals', 2)"></span>
+                        <span class="navigation_dot"
+                            onclick="gotoSlide('slide_meals', 'slide_text_meals', 3)"></span>
+                    </div>
                 </div>
             </section>
             <section id="contact">

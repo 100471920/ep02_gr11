@@ -5,9 +5,10 @@
 */
 
 
-let timeout_ids = {"slide_drinks": 0, "slide_meals": 0};
+let timeout_ids = {"slide_about": 0, "slide_text_drinks": 0, "slide_drinks": 0, "slide_text_meals": 0, "slide_meals": 0};
 
 
+showSlide("slide_about");
 showSlide("slide_text_drinks");
 showSlide("slide_drinks");
 showSlide("slide_text_meals");
@@ -22,22 +23,40 @@ function showSlide(slide_class, slide_index=0)
         slides[i].style.display = "none";
     }
 
-    slides[slide_index].style.display = "block";
+    slides[slide_index].style.display = "flex";
     slide_index = (slide_index + 1) % slides.length;
-    timeout_ids[slide_class] = setTimeout(showSlide, 1000, slide_class, slide_index);
+    timeout_ids[slide_class] = setTimeout(showSlide, 12000, slide_class, slide_index);
 }
 
 
-function stopSliding(slide_class)
+function stopSliding(slide_class, slide_text_class)
 {
+    if (slide_text_class)
+    {
+        clearTimeout(timeout_ids[slide_text_class]);
+    }
     clearTimeout(timeout_ids[slide_class]);
 }
 
 
-function gotoSlide(slide_class, slide_index)
+function resumeSliding(slide_class, slide_text_class, slide_index)
 {
-    stopSliding(slide_class);
     showSlide(slide_class, slide_index);
+    if (slide_text_class)
+    {
+        showSlide(slide_text_class, slide_index);
+    }
+}
+
+
+function gotoSlide(slide_class, slide_text_class, slide_index)
+{
+    stopSliding(slide_class, slide_text_class);
+    showSlide(slide_class, slide_index);
+    if (slide_text_class)
+    {
+        showSlide(slide_text_class, slide_index);
+    }
 }
 
 

@@ -146,7 +146,7 @@ function goForward(){
         document.getElementById("paso3").style.backgroundColor="rgb(95, 115, 135)"
         document.getElementById("paso2").style.backgroundColor="rgb(150, 150, 150)"
         startTimer()
-        }
+        window.sessionStorage.setItem("shoping_list", ShopingList)}
 }
 function goBack(){
     if (document.getElementById("pago").style.display!="none" ){
@@ -156,36 +156,24 @@ function goBack(){
         document.getElementById("paso1").style.backgroundColor="rgb(95, 115, 135)"
         document.getElementById("paso2").style.backgroundColor="rgb(150, 150, 150)"
     }
-    /*if (document.getElementById("status").style.display!="none" ){
-        document.getElementById("menu").style.display="none"
-        document.getElementById("pago").style.display="flex"
-        document.getElementById("status").style.display="none"
-    }*/
 
 }
 function startTimer(){
-    // Set the date we're counting down to
-    var countDownDate = new Date().getTime() +10*1000;
-
-    // Update the count down every 1 second
+    var countDownTime = 10;
+    var seconds_passed = 0
     var x = setInterval(function() {
 
-    // Get today's date and time
-    var now = new Date().getTime();
         
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-        
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var distance = (countDownTime - seconds_passed)*1000;
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-    // Output the result in an element with id="demo"
+    seconds_passed = seconds_passed + 1    
+
+    if(seconds<10){seconds= "0"+seconds}
+    if(minutes<10){minutes= "0"+minutes}
     document.getElementById("clock").innerHTML = minutes + "m " + seconds + "s ";
         
-    // If the count down is over, write some text 
+
     if (distance < 0) {
         clearInterval(x); 
         document.getElementById("clock").innerHTML = "EXPIRED";
@@ -196,8 +184,7 @@ function startTimer(){
 }
 
 function endTimer(){
- document.getElementsByClassName("adios").innerHTML="entregado, que tenga un buen dia, you will be redirected"
- var timer = setTimeout(function() {
+    var timer = setTimeout(function() {
     window.location.href = '../structure/index.html'
 }, 3000);
 
