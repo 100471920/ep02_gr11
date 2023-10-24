@@ -33,62 +33,192 @@
         </header>
         <article class="menu" id="menu">
             <div class="flex-y center cancel-box display-none" id="ShopingList"></div>
-            <div class="menu-content center-box">
-                <section class="flex-y box-grow">
+            <div class="menu-content">
+                <section class="flex-y box-grow menu">
                     <div class="flex-box-y">
                         <h2>Drinks</h2>
                     </div>
-                    <div>
-                        <section class="subsection">
-                        
-                        </section>
-                    </div>
-
-                    <div class="flex-y box-grow">
-                        <div class="flex-x box-grow center">
-                            <div class="flex-x box-grow center product-name">
-                                <p>Drink1</p>
+                    <section class="subsection flex-y">
+                        <div class="flex-y box-grow">
+                            <div class="flex-x box-grow center">
+                                <div class="flex-x box-grow center product-name">
+                                    <p>Þórr`s Strength</p>
+                                </div>
+                                <div class="flex-x box-grow center product-price">
+                                    <p>6$</p>
+                                </div>
                             </div>
-                            <div class="flex-x box-grow center product-price">
-                                <p>9$</p>
-                            </div>
+                            <div class="flex-x box-grow center">
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-remove" onclick="remove_product('Þórr`s Strength')">QUITAR</button>
+                                </div>
+                                <div class="flex-x box-grow center">
+                                    <input  class="Quantity btn" type="number" name="Cantidad" min="0" max="100" value="1" placeholder="Cantidad" >
+                                </div>
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-add" onclick="add_product('Þórr`s Strength')">AÑADIR</button>
+                                </div>
+                            </div> 
                         </div>
-                        <div class="flex-x box-grow center">
+                        <div class="flex-y box-grow">
                             <div class="flex-x box-grow center">
-                                <button class="btn btn-remove" onclick="remove_product('Drink1')">QUITAR</button>
+                                <div class="flex-x box-grow center product-name">
+                                    <p>Níðhqggr`s Blood</p>
+                                </div>
+                                <div class="flex-x box-grow center product-price">
+                                    <p>5$</p>
+                                </div>
                             </div>
                             <div class="flex-x box-grow center">
-                                <input  class="Quantity btn" type="number" name="Cantidad" min="0" max="100" value="1" placeholder="Cantidad" >
-                            </div>
-                            <div class="flex-x box-grow center">
-                                <button class="btn btn-add" onclick="add_product('Drink1')">AÑADIR</button>
-                            </div>
-                        </div> 
-                    </div>
-                    <div class="flex-y box-grow">
-                        <div class="flex-x box-grow center">
-                            <div class="flex-x box-grow center product-name">
-                                <p>Drink2</p>
-                            </div>
-                            <div class="flex-x box-grow center product-price">
-                                <p>5$</p>
-                            </div>
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-remove" onclick="remove_product('Níðhqggr`s Blood')">QUITAR</button>
+                                </div>
+                                <div class="flex-x input-box-grow center">
+                                    <input  class="Quantity btn" type="number" name="Cantidad" min="0" max="100" value="1" placeholder="Cantidad" >
+                                </div>
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-add" onclick="add_product('Níðhqggr`s Blood')">AÑADIR</button>
+                                </div>
+                            </div> 
                         </div>
-                        <div class="flex-x box-grow center">
+                    </section>
+                    <section class="subsection flex-y">
+                        <div class="flex-y box-grow">
                             <div class="flex-x box-grow center">
-                                <button class="btn btn-remove" onclick="remove_product('Drink2')">QUITAR</button>
-                            </div>
-                            <div class="flex-x input-box-grow center">
-                                <input  class="Quantity btn" type="number" name="Cantidad" min="0" max="100" value="1" placeholder="Cantidad" >
+                                <div class="flex-x box-grow center product-name">
+                                    <p>Óðinn`s Wisdom</p>
+                                </div>
+                                <div class="flex-x box-grow center product-price">
+                                    <p>8$</p>
+                                </div>
                             </div>
                             <div class="flex-x box-grow center">
-                                <button class="btn btn-add" onclick="add_product('Drink2')">AÑADIR</button>
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-remove" onclick="remove_product('Óðinn`s Wisdom')">QUITAR</button>
+                                </div>
+                                <div class="flex-x box-grow center">
+                                    <input  class="Quantity btn" type="number" name="Cantidad" min="0" max="100" value="1" placeholder="Cantidad" >
+                                </div>
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-add" onclick="add_product('Óðinn`s Wisdom')">AÑADIR</button>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="flex-y box-grow">
+                            <div class="flex-x box-grow center">
+                                <div class="flex-x box-grow center product-name">
+                                    <p>Loki`s Betrayal</p>
+                                </div>
+                                <div class="flex-x box-grow center product-price">
+                                    <p>7$</p>
+                                </div>
                             </div>
-                        </div> 
-                    </div>
+                            <div class="flex-x box-grow center">
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-remove" onclick="remove_product('Loki`s Betrayal')">QUITAR</button>
+                                </div>
+                                <div class="flex-x input-box-grow center">
+                                    <input  class="Quantity btn" type="number" name="Cantidad" min="0" max="100" value="1" placeholder="Cantidad" >
+                                </div>
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-add" onclick="add_product('Loki`s Betrayal')">AÑADIR</button>
+                                </div>
+                            </div> 
+                        </div>
+                    </section>
                 </section>
-                <section>
-                    
+                <section class="flex-y box-grow menu">
+                    <div class="flex-box-y">
+                        <h2>Meals</h2>
+                    </div>
+                    <section class="subsection flex-y">
+                        <div class="flex-y box-grow">
+                            <div class="flex-x box-grow center">
+                                <div class="flex-x box-grow center product-name">
+                                    <p>Jqrmungandr`s Preys</p>
+                                </div>
+                                <div class="flex-x box-grow center product-price">
+                                    <p>9$</p>
+                                </div>
+                            </div>
+                            <div class="flex-x box-grow center">
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-remove" onclick="remove_product('Jqrmungandr`s Preys')">QUITAR</button>
+                                </div>
+                                <div class="flex-x box-grow center">
+                                    <input  class="Quantity btn" type="number" name="Cantidad" min="0" max="100" value="1" placeholder="Cantidad" >
+                                </div>
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-add" onclick="add_product('Jqrmungandr`s Preys')">AÑADIR</button>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="flex-y box-grow">
+                            <div class="flex-x box-grow center">
+                                <div class="flex-x box-grow center product-name">
+                                    <p>Æsir`s Glory</p>
+                                </div>
+                                <div class="flex-x box-grow center product-price">
+                                    <p>10$</p>
+                                </div>
+                            </div>
+                            <div class="flex-x box-grow center">
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-remove" onclick="remove_product('Æsir`s Glory')">QUITAR</button>
+                                </div>
+                                <div class="flex-x input-box-grow center">
+                                    <input  class="Quantity btn" type="number" name="Cantidad" min="0" max="100" value="1" placeholder="Cantidad" >
+                                </div>
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-add" onclick="add_product('Æsir`s Glory')">AÑADIR</button>
+                                </div>
+                            </div> 
+                        </div>
+                    </section>
+                    <section class="subsection flex-y">
+                        <div class="flex-y box-grow">
+                            <div class="flex-x box-grow center">
+                                <div class="flex-x box-grow center product-name">
+                                    <p>Fenrisúlfr`s Skin</p>
+                                </div>
+                                <div class="flex-x box-grow center product-price">
+                                    <p>8$</p>
+                                </div>
+                            </div>
+                            <div class="flex-x box-grow center">
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-remove" onclick="remove_product('Fenrisúlfr`s Skin')">QUITAR</button>
+                                </div>
+                                <div class="flex-x box-grow center">
+                                    <input  class="Quantity btn" type="number" name="Cantidad" min="0" max="100" value="1" placeholder="Cantidad" >
+                                </div>
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-add" onclick="add_product('Fenrisúlfr`s Skin')">AÑADIR</button>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="flex-y box-grow">
+                            <div class="flex-x box-grow center">
+                                <div class="flex-x box-grow center product-name">
+                                    <p>Freyja`s Beauty</p>
+                                </div>
+                                <div class="flex-x box-grow center product-price">
+                                    <p>12$</p>
+                                </div>
+                            </div>
+                            <div class="flex-x box-grow center">
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-remove" onclick="remove_product('Freyja`s Beauty')">QUITAR</button>
+                                </div>
+                                <div class="flex-x input-box-grow center">
+                                    <input  class="Quantity btn" type="number" name="Cantidad" min="0" max="100" value="1" placeholder="Cantidad" >
+                                </div>
+                                <div class="flex-x box-grow center">
+                                    <button class="btn btn-add" onclick="add_product('Freyja`s Beauty')">AÑADIR</button>
+                                </div>
+                            </div> 
+                        </div>
+                    </section>
                 </section>
             </div>
 
@@ -99,7 +229,8 @@
         </article>
         <article class="flex-y box-grow display-none menu" id="status">
             <section class="flex-y box-grow light-text big-letters center"> 
-                <clock class="flex-y box-grow light-text big-letters center" id="clock">clock</clock>
+                <div class="flex-x box-grow light-text medium-letters" >Pedido Realizado Correctamente</div>
+                <clock class="flex-y box-grow light-text big-letters center" id="clock">Tiempo Estimado...</clock>
             </section>
         </article>
         

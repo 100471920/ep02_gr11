@@ -145,7 +145,7 @@ function goForward(){
         document.getElementById("status").style.display="flex"
         document.getElementById("paso3").style.backgroundColor="rgb(95, 115, 135)"
         document.getElementById("paso2").style.backgroundColor="rgb(150, 150, 150)"
-        startTimer()
+        setTimeout(startTimer,5000)
         window.sessionStorage.setItem("shoping_list", ShopingList)
         }
 }
@@ -170,7 +170,7 @@ function parpadeo()
 
 
 function startTimer(){
-    var countDownTime = 10;
+    var countDownTime = 10*60;
     var seconds_passed = 0
     var x = setInterval(function() {
 
