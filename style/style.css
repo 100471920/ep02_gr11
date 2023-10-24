@@ -587,7 +587,7 @@ input, textarea, .cancel-box
 }
 .big-letters
 {
-    font-size: max(15dvw,30px);
+    font-size: max(10dvw,25px);
     text-align: center;
 }
 .medium-letters
